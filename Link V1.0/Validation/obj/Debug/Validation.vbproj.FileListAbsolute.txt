@@ -69,3 +69,11 @@ C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\De
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.dll
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.xml
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\bin\Debug\Validation.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\bin\Debug\Validation.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\bin\Debug\Validation.xml
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\obj\Debug\Validation.Resources.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\obj\Debug\Validation.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\obj\Debug\Validation.xml
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\Validation\obj\Debug\Validation.pdb

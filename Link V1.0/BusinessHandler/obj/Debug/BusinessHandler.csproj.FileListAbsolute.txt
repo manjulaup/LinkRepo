@@ -43,3 +43,12 @@ C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessHandler\b
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.csprojResolveAssemblyReference.cache
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.dll
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\BusinessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\BusinessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\EntityHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\DataAccessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\EntityHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.csprojResolveAssemblyReference.cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.pdb

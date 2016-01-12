@@ -33,3 +33,10 @@ C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\DataAccessHandler
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb

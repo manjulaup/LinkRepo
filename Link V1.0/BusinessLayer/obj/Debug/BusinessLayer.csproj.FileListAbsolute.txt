@@ -43,3 +43,4 @@ C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
