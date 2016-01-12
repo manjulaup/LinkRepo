@@ -46,6 +46,7 @@
     <Compile Include="BaseRolePrivileges.cs" />
     <Compile Include="ChoseBank.cs" />
     <Compile Include="CreditorPayment.cs" />
+    <Compile Include="CustomerMaster.cs" />
     <Compile Include="DALBase.cs" />
     <Compile Include="DALConnManager.cs" />
     <Compile Include="DALPayment.cs" />

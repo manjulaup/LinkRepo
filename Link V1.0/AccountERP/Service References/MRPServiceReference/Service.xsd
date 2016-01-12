@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://198.101.10.177/WCFMRP/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EntityHandler" />
+  <xs:element name="GetCreditorFinal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="objPayment" nillable="true" type="q1:LINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCreditorFinalResult" nillable="true" type="q2:ArrayOfLINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalSupplierList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalSupplierListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCreditorFinalSupplierListResult" nillable="true" type="q3:ArrayOfLINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalSupplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="objPayment" nillable="true" type="q4:LINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalSupplierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCreditorFinalSupplierResult" nillable="true" type="q5:ArrayOfLINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalSupplierByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="objPayment" nillable="true" type="q6:LINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalSupplierByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCreditorFinalSupplierByIDResult" nillable="true" type="q7:ArrayOfLINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalGRN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="objPayment" nillable="true" type="q8:LINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditorFinalGRNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCreditorFinalGRNResult" nillable="true" type="q9:ArrayOfLINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerMaster">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCustomerMasterResult" nillable="true" type="q10:ArrayOfCustomerMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

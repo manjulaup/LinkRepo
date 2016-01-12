@@ -186,6 +186,7 @@ F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.P
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
+<<<<<<< HEAD
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Finance.exe
@@ -219,3 +220,12 @@ E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmUser
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
+=======
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\Finance.exe.config
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\EntityHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\EntityHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\BusinessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\BusinessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\DataAccessHandler.pdb
+>>>>>>> 23780739ba5b24ecb8163624f9b0493f929a1d7e

@@ -22,7 +22,7 @@ public class DALConnManager
         SqlConnection ConnectionManager = new SqlConnection();
         try
         {
-            ConnectionManager.ConnectionString = @"Data Source=.;Initial Catalog=MRP;Persist Security Info=True;User ID=sa;Password=123";
+            ConnectionManager.ConnectionString = @"Data Source=198.101.10.177\SQLEXPRESS;Initial Catalog=MRP;Persist Security Info=True;User ID=sa;Password=Nimmibaba123";
             ConnectionManager.Open();
         }
         catch (Exception ex)
@@ -38,7 +38,7 @@ public class DALConnManager
         SqlConnection ConnectionManager = new SqlConnection();
         try
         {
-            ConnectionManager.ConnectionString = @"Data Source=.;Initial Catalog=LinkFinace;Persist Security Info=True;User ID=sa;Password=123";
+            ConnectionManager.ConnectionString = @"Data Source=198.101.10.177\SQLEXPRESS;Initial Catalog=MRP;Persist Security Info=True;User ID=sa;Password=Nimmibaba123";
             ConnectionManager.Open();
         }
         catch (Exception ex)
@@ -54,7 +54,7 @@ public class DALConnManager
         SqlConnection ConnectionManager = new SqlConnection();
         try
         {
-            ConnectionManager.ConnectionString = @"Data Source=localhost;Initial Catalog=testdb;Persist Security Info=True;User ID=sa;Password=123";
+            ConnectionManager.ConnectionString = @"Data Source=198.101.10.177\SQLEXPRESS;Initial Catalog=MRP;Persist Security Info=True;User ID=sa;Password=Nimmibaba123";
             ConnectionManager.Open();
         }
         catch (Exception ex)
