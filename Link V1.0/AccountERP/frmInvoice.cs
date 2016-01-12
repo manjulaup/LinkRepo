@@ -570,10 +570,40 @@ namespace AccountERP
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
+            GetCustomerMaster();
             ClearCurrentScreen();
             EditCurrentScreen(true);
             dtpBilingDate.Value = DateTime.Today;
             dtpInvoiceDate.Value = DateTime.Today;
+        }
+
+        public void GetCustomerMaster()
+        {
+            try
+            {
+                Finance.MRPServiceReference.ServiceClient objService = new Finance.MRPServiceReference.ServiceClient();
+                List<EntityHandler.CustomerMaster> objList = new List<EntityHandler.CustomerMaster>();
+                EntityHandler.CustomerMaster [] objArry = objService.GetCustomerMaster();
+                objList = new BusinessHandler.CustomerMaster().BALGetCustomerMaster();
+            
+                cmbSupplier.Items.Clear();
+                ComboboxItem itemDefault = new ComboboxItem();
+                itemDefault.Text = "--Select--";
+                itemDefault.Value = "0";
+                cmbSupplier.Items.Add(itemDefault);
+
+                for (int i = 0; i < objArry.Length; i++)
+                {
+                    ComboboxItem item = new ComboboxItem();
+                    item.Text = objArry[i].Name;
+                    item.Value = objArry[i].Customer_Code;
+                    cmbSupplier.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
