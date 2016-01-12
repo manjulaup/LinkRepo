@@ -43,6 +43,7 @@
     <Compile Include="BALPayment.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="BankAccount.cs" />
+    <Compile Include="CustomerMaster.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleDetails.cs" />
