@@ -46,7 +46,6 @@
     <Compile Include="BaseRolePrivileges.cs" />
     <Compile Include="ChoseBank.cs" />
     <Compile Include="CreditorPayment.cs" />
-    <Compile Include="CustomerMaster.cs" />
     <Compile Include="LINKPayment.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

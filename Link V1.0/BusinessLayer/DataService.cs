@@ -38,14 +38,14 @@ namespace DataLayer.DataService
             if (IsLocal)
                 {
                     servername = "localhost";
-                    Connection = "server=" + servername + ";uid=root;pwd=Anubaba123;Connection Lifetime=120;pooling=true ;max pool size=50;database=";
+                    Connection = "server=" + servername + ";uid=root;pwd=melani123;Connection Lifetime=120;pooling=true ;max pool size=50;database=";
                     AccountERP = new MySqlConnection(Connection + "tsfs;");
                     AccountConnection = new MySqlConnection(Connection + "Accounterp;");
                 }
             else
                 {
                     servername = "3sfab";
-                    Connection = "server=" + servername + ";uid=root;pwd=Anubaba123;Connection Lifetime=120;pooling=true ;max pool size=50;database=";
+                    Connection = "server=" + servername + ";uid=root;pwd=melani123;Connection Lifetime=120;pooling=true ;max pool size=50;database=";
                     AccountERP = new MySqlConnection(Connection + "tsfs;");
                     AccountConnection = new MySqlConnection(Connection + "Accounterp;");
                 }

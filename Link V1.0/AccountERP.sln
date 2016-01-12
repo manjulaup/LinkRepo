@@ -13,6 +13,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessHandler", "DataAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityHandler", "EntityHandler\EntityHandler.csproj", "{80CDD586-26A6-4B18-B5B5-2DF92FECE90E}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LinkMRPService", "LinkMRPService\", "{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/LinkMRPService"
+		Debug.AspNetCompiler.PhysicalPath = "LinkMRPService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LinkMRPService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LinkMRPService"
+		Release.AspNetCompiler.PhysicalPath = "LinkMRPService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LinkMRPService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1163"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +103,16 @@ Global
 		{80CDD586-26A6-4B18-B5B5-2DF92FECE90E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{80CDD586-26A6-4B18-B5B5-2DF92FECE90E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{80CDD586-26A6-4B18-B5B5-2DF92FECE90E}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

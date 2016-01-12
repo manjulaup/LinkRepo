@@ -51,14 +51,4 @@ public class Service
     }
 
 
-    //----------------------------------------------------------------
-
- 
-
-    [OperationContract]
-    public List<LINKPayment> GetCreditorFinalGRN(LINKPayment objPayment)
-    {
-        return objBALPayment.BALGetFinalCreditorGRN(objPayment);
-    }
-
 }

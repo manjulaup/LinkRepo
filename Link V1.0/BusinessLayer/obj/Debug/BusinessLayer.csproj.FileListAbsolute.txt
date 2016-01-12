@@ -34,13 +34,3 @@ E:\Link\New version\Project\Link\BusinessLayer\bin\Debug\Validation.xml
 E:\Link\New version\Project\Link\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 E:\Link\New version\Project\Link\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\Link\New version\Project\Link\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin\Debug\MySql.Data.dll
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin\Debug\Validation.dll
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin\Debug\Validation.pdb
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\bin\Debug\Validation.xml
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.pdb
-F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache

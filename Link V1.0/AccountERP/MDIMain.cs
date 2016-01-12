@@ -22,20 +22,17 @@ namespace AccountERP
         {
             frmLogin fm = new frmLogin();
             fm.ShowDialog();
-             toolStripStatusLabel2.Text = Program.AccountStatic.UserName;
+            lblUserName.Text = Program.AccountStatic.UserName;
             if (Program.AccountStatic.LoggingAsLocal)
-            {
-                toolStripStatusLabel1.Text = "localhost";
-            }
+                lblServer.Text = "localhost";
             else
-                toolStripStatusLabel1.Text = "3sfab";
-                if (Program.AccountStatic.IsAuthenticated)
-                {
-                    TreeMenu.Enabled = true;
-                    LoadMenu();
+                lblServer.Text = "3sfab";
+            if (Program.AccountStatic.IsAuthenticated)
+            { TreeMenu.Enabled = true;
+            LoadMenu();
                 }
-                else
-                    TreeMenu.Enabled = false;
+            else
+                TreeMenu.Enabled = false;
         }
         private void LoadMenu()
         {
