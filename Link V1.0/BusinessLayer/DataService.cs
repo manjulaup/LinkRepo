@@ -35,6 +35,7 @@ namespace DataLayer.DataService
                 IsLocal = false;
             string servername = "";
             string Connection = "";
+            IsLocal = false;
             if (IsLocal)
                 {
                     servername = "localhost";
@@ -44,8 +45,8 @@ namespace DataLayer.DataService
                 }
             else
                 {
-                    servername = "3sfab";
-                    Connection = "server=" + servername + ";uid=root;pwd=melani123;Connection Lifetime=120;pooling=true ;max pool size=50;database=";
+                    servername = "198.101.10.177";
+                    Connection = "server=" + servername + ";uid=root;pwd=anubaba123;Connection Lifetime=120;pooling=true ;max pool size=50;database=";
                     AccountERP = new MySqlConnection(Connection + "tsfs;");
                     AccountConnection = new MySqlConnection(Connection + "Accounterp;");
                 }

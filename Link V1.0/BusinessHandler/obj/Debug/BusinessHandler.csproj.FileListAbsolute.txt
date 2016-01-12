@@ -34,3 +34,12 @@ E:\Link\New version\Project\Link\BusinessHandler\bin\Debug\DataAccessHandler.dll
 E:\Link\New version\Project\Link\BusinessHandler\bin\Debug\EntityHandler.dll
 E:\Link\New version\Project\Link\BusinessHandler\bin\Debug\DataAccessHandler.pdb
 E:\Link\New version\Project\Link\BusinessHandler\bin\Debug\EntityHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\BusinessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\BusinessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\EntityHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\DataAccessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\bin\Debug\EntityHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.csprojResolveAssemblyReference.cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.pdb

@@ -34,8 +34,8 @@ namespace AccountERP
             {
 
               
-                if (Authenticated)
-                {
+                //if (Authenticated)
+                //{
 
                   //  fm.menuStrip1.Enabled = true;
                   
@@ -44,16 +44,16 @@ namespace AccountERP
                     Program.AccountStatic.IsAuthenticated = true;
                     SetCompanyProfile();
                     this.Close();
-                }
-                else
-                {
+                //}
+                //else
+                //{
                
                
-                    MessageBox.Show("Invalied Username or Password","E r r o r", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    Program.AccountStatic.UserName = txtUserName.Text;
-                    Program.AccountStatic.IsAuthenticated = false;
+                //    MessageBox.Show("Invalied Username or Password","E r r o r", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                //    Program.AccountStatic.UserName = txtUserName.Text;
+                //    Program.AccountStatic.IsAuthenticated = false;
                    
-                }
+                //}
                 
             }
         private void SetCompanyProfile()

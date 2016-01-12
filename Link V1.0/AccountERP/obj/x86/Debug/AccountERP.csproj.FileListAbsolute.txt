@@ -153,3 +153,36 @@ E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmUserRigh
 E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
 E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
 E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\Finance.exe
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\Finance.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\BusinessLayer.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\Validation.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\MySql.Data.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\GSMCommunication.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\PDUConverter.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\RS232.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\GSMCommShared.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\BusinessLayer.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\Validation.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\Validation.xml
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csprojResolveAssemblyReference.cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
