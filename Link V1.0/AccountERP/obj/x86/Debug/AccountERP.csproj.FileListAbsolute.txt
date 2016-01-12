@@ -1,0 +1,188 @@
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.exe
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.pdb
+G:\AccountERP\AccountERP\bin\Debug\AccountERP.exe
+G:\AccountERP\AccountERP\bin\Debug\AccountERP.pdb
+G:\AccountERP\AccountERP\bin\Debug\BusinessLayer.dll
+G:\AccountERP\AccountERP\bin\Debug\Validation.dll
+G:\AccountERP\AccountERP\bin\Debug\DataLayer.dll
+G:\AccountERP\AccountERP\bin\Debug\GSMCommunication.dll
+G:\AccountERP\AccountERP\bin\Debug\PDUConverter.dll
+G:\AccountERP\AccountERP\bin\Debug\MySql.Data.dll
+G:\AccountERP\AccountERP\bin\Debug\RS232.dll
+G:\AccountERP\AccountERP\bin\Debug\GSMCommShared.dll
+G:\AccountERP\AccountERP\bin\Debug\BusinessLayer.pdb
+G:\AccountERP\AccountERP\bin\Debug\DataLayer.pdb
+G:\AccountERP\AccountERP\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+G:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.Properties.Resources.resources
+G:\AccountERP\AccountERP\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\AccountERP\AccountERP\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.csprojResolveAssemblyReference.cache
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+E:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
+E:\AccountERP\AccountERP\bin\Debug\BusinessLayer.dll
+E:\AccountERP\AccountERP\bin\Debug\Validation.dll
+E:\AccountERP\AccountERP\bin\Debug\MySql.Data.dll
+E:\AccountERP\AccountERP\bin\Debug\GSMCommunication.dll
+E:\AccountERP\AccountERP\bin\Debug\PDUConverter.dll
+E:\AccountERP\AccountERP\bin\Debug\RS232.dll
+E:\AccountERP\AccountERP\bin\Debug\GSMCommShared.dll
+E:\AccountERP\AccountERP\bin\Debug\BusinessLayer.pdb
+E:\AccountERP\AccountERP\bin\Debug\Validation.pdb
+E:\AccountERP\AccountERP\bin\Debug\Validation.xml
+E:\AccountERP\AccountERP\obj\x86\Debug\Finance3S.Properties.Resources.resources
+E:\AccountERP\AccountERP\bin\Debug\Finance3S.exe
+E:\AccountERP\AccountERP\bin\Debug\Finance3S.pdb
+E:\AccountERP\AccountERP\obj\x86\Debug\Finance3S.exe
+E:\AccountERP\AccountERP\obj\x86\Debug\Finance3S.pdb
+D:\AccountERP\AccountERP\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\Finance3S.Properties.Resources.resources
+D:\AccountERP\AccountERP\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\AccountERP\AccountERP\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\AccountERP\AccountERP\bin\Debug\Finance3S.exe
+D:\AccountERP\AccountERP\bin\Debug\Finance3S.pdb
+D:\AccountERP\AccountERP\bin\Debug\BusinessLayer.dll
+D:\AccountERP\AccountERP\bin\Debug\Validation.dll
+D:\AccountERP\AccountERP\bin\Debug\MySql.Data.dll
+D:\AccountERP\AccountERP\bin\Debug\GSMCommunication.dll
+D:\AccountERP\AccountERP\bin\Debug\PDUConverter.dll
+D:\AccountERP\AccountERP\bin\Debug\RS232.dll
+D:\AccountERP\AccountERP\bin\Debug\GSMCommShared.dll
+D:\AccountERP\AccountERP\bin\Debug\BusinessLayer.pdb
+D:\AccountERP\AccountERP\bin\Debug\Validation.pdb
+D:\AccountERP\AccountERP\bin\Debug\Validation.xml
+D:\AccountERP\AccountERP\obj\x86\Debug\Finance3S.exe
+D:\AccountERP\AccountERP\obj\x86\Debug\Finance3S.pdb
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.csprojResolveAssemblyReference.cache
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+E:\Link\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
+E:\Link\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
+E:\Link\AccountERP\bin\Debug\Finance.exe
+E:\Link\AccountERP\bin\Debug\Finance.pdb
+E:\Link\AccountERP\bin\Debug\BusinessLayer.dll
+E:\Link\AccountERP\bin\Debug\Validation.dll
+E:\Link\AccountERP\bin\Debug\MySql.Data.dll
+E:\Link\AccountERP\bin\Debug\GSMCommunication.dll
+E:\Link\AccountERP\bin\Debug\PDUConverter.dll
+E:\Link\AccountERP\bin\Debug\RS232.dll
+E:\Link\AccountERP\bin\Debug\GSMCommShared.dll
+E:\Link\AccountERP\bin\Debug\BusinessLayer.pdb
+E:\Link\AccountERP\bin\Debug\Validation.pdb
+E:\Link\AccountERP\bin\Debug\Validation.xml
+E:\Link\AccountERP\obj\x86\Debug\Finance.exe
+E:\Link\AccountERP\obj\x86\Debug\Finance.pdb
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\Finance.exe
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\Finance.pdb
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\Finance.exe
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\Finance.pdb
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\BusinessLayer.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\Validation.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\GSMCommunication.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\PDUConverter.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\MySql.Data.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\RS232.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\GSMCommShared.dll
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\BusinessLayer.pdb
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\Validation.pdb
+E:\Link\New version\Project\Link\AccountERP\bin\Debug\Validation.xml
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.csprojResolveAssemblyReference.cache
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
+E:\Link\New version\Project\Link\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\Finance.exe
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\Finance.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\BusinessLayer.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\Validation.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\MySql.Data.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\GSMCommunication.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\PDUConverter.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\RS232.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\GSMCommShared.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\BusinessLayer.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\Validation.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\Validation.xml
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csprojResolveAssemblyReference.cache
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache

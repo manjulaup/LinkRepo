@@ -1,0 +1,10 @@
+E:\AccountERP\DataLayer\bin\Debug\DataLayer.dll
+E:\AccountERP\DataLayer\bin\Debug\DataLayer.pdb
+E:\AccountERP\DataLayer\obj\Debug\DataLayer.dll
+E:\AccountERP\DataLayer\obj\Debug\DataLayer.pdb
+E:\AccountERP\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\AccountERP\DataLayer\bin\Debug\DataLayer.dll
+D:\AccountERP\DataLayer\bin\Debug\DataLayer.pdb
+D:\AccountERP\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\AccountERP\DataLayer\obj\Debug\DataLayer.dll
+D:\AccountERP\DataLayer\obj\Debug\DataLayer.pdb

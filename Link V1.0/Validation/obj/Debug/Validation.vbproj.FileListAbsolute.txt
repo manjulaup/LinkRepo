@@ -1,0 +1,71 @@
+D:\EncripTest new\Validation\bin\Debug\Validation.dll
+D:\EncripTest new\Validation\bin\Debug\Validation.pdb
+D:\EncripTest new\Validation\bin\Debug\Validation.xml
+D:\EncripTest new\Validation\bin\Debug\DataLayer.pdb
+D:\EncripTest new\Validation\obj\Debug\Validation.vbprojResolveAssemblyReference.cache
+D:\EncripTest new\Validation\obj\Debug\Validation.Resources.resources
+D:\EncripTest new\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cache
+D:\EncripTest new\Validation\obj\Debug\Validation.dll
+D:\EncripTest new\Validation\obj\Debug\Validation.xml
+D:\EncripTest new\Validation\obj\Debug\Validation.pdb
+E:\AccountERP\Validation\bin\Debug\Validation.dll
+E:\AccountERP\Validation\bin\Debug\Validation.pdb
+E:\AccountERP\Validation\bin\Debug\Validation.xml
+E:\AccountERP\Validation\bin\Debug\DataLayer.dll
+E:\AccountERP\Validation\bin\Debug\MySql.Data.dll
+E:\AccountERP\Validation\bin\Debug\DataLayer.pdb
+E:\AccountERP\Validation\obj\Debug\Validation.vbprojResolveAssemblyReference.cache
+E:\AccountERP\Validation\obj\Debug\Validation.Resources.resources
+E:\AccountERP\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cache
+E:\AccountERP\Validation\obj\Debug\Validation.dll
+E:\AccountERP\Validation\obj\Debug\Validation.xml
+E:\AccountERP\Validation\obj\Debug\Validation.pdb
+D:\AccountERP\Validation\bin\Debug\Validation.dll
+D:\AccountERP\Validation\bin\Debug\Validation.pdb
+D:\AccountERP\Validation\bin\Debug\Validation.xml
+D:\AccountERP\Validation\bin\Debug\DataLayer.dll
+D:\AccountERP\Validation\bin\Debug\MySql.Data.dll
+D:\AccountERP\Validation\bin\Debug\DataLayer.pdb
+D:\AccountERP\Validation\obj\Debug\ResolveAssemblyReference.cache
+D:\AccountERP\Validation\obj\Debug\Validation.Resources.resources
+D:\AccountERP\Validation\obj\Debug\ResGen.read.1.tlog
+D:\AccountERP\Validation\obj\Debug\ResGen.write.1.tlog
+D:\AccountERP\Validation\obj\Debug\Validation.dll
+D:\AccountERP\Validation\obj\Debug\Validation.xml
+D:\AccountERP\Validation\obj\Debug\Validation.pdb
+E:\Link\Validation\bin\Debug\Validation.dll
+E:\Link\Validation\bin\Debug\Validation.pdb
+E:\Link\Validation\bin\Debug\Validation.xml
+E:\Link\Validation\bin\Debug\DataLayer.dll
+E:\Link\Validation\bin\Debug\MySql.Data.dll
+E:\Link\Validation\bin\Debug\DataLayer.pdb
+E:\Link\Validation\obj\Debug\Validation.vbprojResolveAssemblyReference.cache
+E:\Link\Validation\obj\Debug\Validation.Resources.resources
+E:\Link\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cache
+E:\Link\Validation\obj\Debug\Validation.dll
+E:\Link\Validation\obj\Debug\Validation.xml
+E:\Link\Validation\obj\Debug\Validation.pdb
+E:\Link\New version\Project\Link\Validation\bin\Debug\Validation.dll
+E:\Link\New version\Project\Link\Validation\bin\Debug\Validation.pdb
+E:\Link\New version\Project\Link\Validation\bin\Debug\Validation.xml
+E:\Link\New version\Project\Link\Validation\bin\Debug\DataLayer.dll
+E:\Link\New version\Project\Link\Validation\bin\Debug\MySql.Data.dll
+E:\Link\New version\Project\Link\Validation\bin\Debug\DataLayer.pdb
+E:\Link\New version\Project\Link\Validation\obj\Debug\Validation.vbprojResolveAssemblyReference.cache
+E:\Link\New version\Project\Link\Validation\obj\Debug\Validation.Resources.resources
+E:\Link\New version\Project\Link\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cache
+E:\Link\New version\Project\Link\Validation\obj\Debug\Validation.dll
+E:\Link\New version\Project\Link\Validation\obj\Debug\Validation.xml
+E:\Link\New version\Project\Link\Validation\obj\Debug\Validation.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\bin\Debug\Validation.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\bin\Debug\Validation.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\bin\Debug\Validation.xml
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\bin\Debug\DataLayer.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\bin\Debug\MySql.Data.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\bin\Debug\DataLayer.pdb
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.vbprojResolveAssemblyReference.cache
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.Resources.resources
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cache
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.dll
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.xml
+C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\Validation\obj\Debug\Validation.pdb
