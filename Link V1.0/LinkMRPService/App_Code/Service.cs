@@ -52,7 +52,7 @@ public class Service
 
     // Pahan Sri Madusanka Rodrigo
     BusinessHandler.CustomerMaster objCustomerMaster = new BusinessHandler.CustomerMaster();
-
+    
     [OperationContract]
     public List<EntityHandler.CustomerMaster> GetCustomerMaster()
     {

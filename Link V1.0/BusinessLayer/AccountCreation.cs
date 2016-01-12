@@ -1115,6 +1115,7 @@ namespace BusinessLayer.AccountCreations
                 + " FROM accounterp.accountname "
                 + " INNER JOIN tsfs.tblsupplier ON accountname.AccountID =tblsupplier.SupplierAccount";
             MyGeneral.LoadStatusCombo(cmb, sql1);  
+
         }
         public void LoadSupplier(DataGridView  dgv)
             {

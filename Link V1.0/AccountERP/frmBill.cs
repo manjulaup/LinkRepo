@@ -11,17 +11,19 @@ using BusinessLayer.CommonOperation;
 using BusinessLayer.Billings;
 using BusinessLayer.AccountTranactions;
 using BusinessLayer.Supplier;
-
-
+using EntityHandler;
 
 namespace AccountERP
 {
     public partial class frmBill : Form
     {
-    private AccountCreation MyAccount = null;
-    private CommonOperations MyCommon = null;
-    private AccountTranaction MyTransaction = null;
-    private Billing MyBill = null;
+
+        Finance.MRPServiceReference.ServiceClient objService = new Finance.MRPServiceReference.ServiceClient();
+        private AccountCreation MyAccount = null;
+        private CommonOperations MyCommon = null;
+        private AccountTranaction MyTransaction = null;
+        private Billing MyBill = null;
+
         public frmBill()
         {
             InitializeComponent();
@@ -40,17 +42,59 @@ namespace AccountERP
           
             panel1.Top = (this.Height - panel1.Height) / 2;
             panel1.Left = (this.Width - panel1.Width) / 2;
-            MyAccount.LoadSupplier(cmbSupplier);
+            //MyAccount.LoadSupplier(cmbSupplier);
+            //Edit by manjula   *** Load suppliers from MRP
+            LoadSuppliers();
+
             MyAccount.LoadSupplier(cmbSearchSupplier);
             MyCommon.LoadStatusComboAccount(cmbStatus, 4);
             EditScreen(false);
         }
 
+        private void LoadSuppliers()
+        {
+            DataTable dt = new DataTable();
+            DataRow dr;
+
+            dt.Columns.Add("SupplierID");
+            dt.Columns.Add("SupplierName");
+
+            LINKPayment[] objSupList = objService.GetCreditorFinalSupplierList();
+            if (objSupList.Length > 0)
+            {
+                for (int j = 0; j < objSupList.Length; j++)
+                {
+
+                       dr = dt.NewRow();
+
+                       dr[0] = objSupList[j].SupName.ToString();
+                       dr[1] = objSupList[j].SupName.ToString();
+
+                        dt.Rows.Add(dr.ItemArray);
+                }
+
+                cmbSupplier.DataSource = dt;
+                cmbSupplier.DisplayMember = "SupplierID";
+                cmbSupplier.ValueMember = "SupplierName";
+            }
+
+        }
+
+        private void LoadGRN(LINKPayment objLink)
+        {
+
+        }
+
         private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
             {
-                string supid = MyCommon.GetSelectedID(cmbSupplier,true);
+                //string supid = MyCommon.GetSelectedID(cmbSupplier,true);
+                //Edit by manjula
+                string SupName = "R.D. LALITH   PRIYANTHA";
+                string supid = "10519";    
+
                 int SupID1 = int.Parse(supid);
-                lblAccnumber.Text = MyAccount.GetSupplierAccountNumber(SupID1);
+                //lblAccnumber.Text = MyAccount.GetSupplierAccountNumber(SupID1);
+                lblAccnumber.Text = "1295090";
                 string curRate = "";
                 decimal ExRate = MyAccount.GetExRate(lblAccnumber.Text, out curRate);
                 lblExchangerate.Text = ExRate.ToString("#0.000");
@@ -59,9 +103,17 @@ namespace AccountERP
                     lblExchangerate.Enabled = true;
                 else
                     lblExchangerate.Enabled = false;
-                MyBill.LoadGRNNumbers(cmbGRN, SupID1);
-                txtpayterm.Text = MyAccount.GetCreditPeriod(SupID1,true).ToString ();
-                lblTotalBillOutstanding.Text = MyBill.GetTotalOutstanding(SupID1).ToString("##0.00");
+
+               // MyBill.LoadGRNNumbers(cmbGRN, SupID1);
+               // txtpayterm.Text = MyAccount.GetCreditPeriod(SupID1, true).ToString();
+               // lblTotalBillOutstanding.Text = MyBill.GetTotalOutstanding(SupID1).ToString("##0.00");
+               LINKPayment objLink=new LINKPayment();
+                objLink.SupName=SupName;
+                LoadGRN(objLink);
+
+                txtpayterm.Text = "999";
+                lblTotalBillOutstanding.Text = "9.99";
+
             }
         private void CalTotalGRNAmount()
         {
@@ -73,6 +125,7 @@ namespace AccountERP
             }
             lblGrnToala.Text = total.ToString("##0.000");
         }
+
         private void cmbGRN_SelectedIndexChanged(object sender, EventArgs e)
             {
                  string supid = MyCommon.GetSelectedID(cmbSupplier,true);
