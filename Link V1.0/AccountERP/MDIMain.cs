@@ -22,11 +22,11 @@ namespace AccountERP
         {
             frmLogin fm = new frmLogin();
             fm.ShowDialog();
-            lblUserName.Text = Program.AccountStatic.UserName;
+            tsUser.Text = Program.AccountStatic.UserName;
             if (Program.AccountStatic.LoggingAsLocal)
-                lblServer.Text = "localhost";
+                tsServer.Text = "localhost";
             else
-                lblServer.Text = "3sfab";
+                tsServer.Text = "3sfab";
             if (Program.AccountStatic.IsAuthenticated)
             { TreeMenu.Enabled = true;
             LoadMenu();
@@ -114,6 +114,11 @@ namespace AccountERP
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TreeMenu_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
 
     }
