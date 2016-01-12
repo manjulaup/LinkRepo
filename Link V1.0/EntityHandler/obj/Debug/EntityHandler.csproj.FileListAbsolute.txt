@@ -18,3 +18,7 @@ F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\EntityHandler\bin\Debug\EntityHand
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\EntityHandler\bin\Debug\EntityHandler.pdb
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\EntityHandler\obj\Debug\EntityHandler.dll
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\EntityHandler\obj\Debug\EntityHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\bin\Debug\EntityHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\bin\Debug\EntityHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\obj\Debug\EntityHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\obj\Debug\EntityHandler.pdb

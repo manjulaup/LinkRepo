@@ -229,3 +229,4 @@ F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\DataAccessHan
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\BusinessHandler.pdb
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\bin\Debug\DataAccessHandler.pdb
 >>>>>>> 23780739ba5b24ecb8163624f9b0493f929a1d7e
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Finance.exe.config
