@@ -186,3 +186,36 @@ F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.P
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
 F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Finance.exe
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Finance.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\BusinessLayer.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Validation.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\MySql.Data.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\GSMCommunication.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\PDUConverter.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\RS232.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\GSMCommShared.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\BusinessLayer.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Validation.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\bin\Debug\Validation.xml
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csprojResolveAssemblyReference.cache
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.blankForm.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAccountCreation.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAccountType.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmBill.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmCheque.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmCompanyConfig.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmInvoice.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmJobList.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmJournal.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmLedgers.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmLogin.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmPaymentVoucher.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmPrintZone.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmReceiptVoucher.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmUserRight.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.MDIMain.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\Finance.Properties.Resources.resources
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.csproj.GenerateResource.Cache
