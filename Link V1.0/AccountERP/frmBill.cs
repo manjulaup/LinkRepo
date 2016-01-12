@@ -82,14 +82,37 @@ namespace AccountERP
 
         private void LoadGRN(LINKPayment objLink)
         {
+            DataTable dt = new DataTable();
+            DataRow dr;
 
+            dt.Columns.Add("GRNNO");
+            dt.Columns.Add("GRNNOval");
+
+            LINKPayment[] objSupList = objService.GetCreditorFinalGRN(objLink);
+            if (objSupList.Length > 0)
+            {
+                for (int j = 0; j < objSupList.Length; j++)
+                {
+
+                    dr = dt.NewRow();
+
+                    dr[0] = objSupList[j].GRNNo.ToString();
+                    dr[1] = objSupList[j].GRNNo.ToString();
+
+                    dt.Rows.Add(dr.ItemArray);
+                }
+
+                cmbGRN.DataSource = dt;
+                cmbGRN.DisplayMember = "GRNNO";
+                cmbGRN.ValueMember = "GRNNOval";
+            }
         }
 
         private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
             {
                 //string supid = MyCommon.GetSelectedID(cmbSupplier,true);
                 //Edit by manjula
-                string SupName = "R.D. LALITH   PRIYANTHA";
+                string SupName = "LAKWIN  ENTERPRISES";
                 string supid = "10519";    
 
                 int SupID1 = int.Parse(supid);
@@ -128,11 +151,14 @@ namespace AccountERP
 
         private void cmbGRN_SelectedIndexChanged(object sender, EventArgs e)
             {
-                 string supid = MyCommon.GetSelectedID(cmbSupplier,true);
+                // string supid = MyCommon.GetSelectedID(cmbSupplier,true);
+            //Edit by manjula
+                string supid = "123456";
                 int SupID = int.Parse(supid);
-                DataTable tb = MyBill.GetGRNData(cmbGRN.Text, SupID);
-                MyCommon.LoadDatatoTableWithoutBind(dtpGRNDetals, tb, "Load GRN");
+                //DataTable tb = MyBill.GetGRNData(cmbGRN.Text, SupID);
+                //MyCommon.LoadDatatoTableWithoutBind(dtpGRNDetals, tb, "Load GRN");
                 
+
                 chkSelect.Checked = true;
                 calTotalValue();
                 txtDescription.Text = "Purchase of " + cmbGRN.Text;
