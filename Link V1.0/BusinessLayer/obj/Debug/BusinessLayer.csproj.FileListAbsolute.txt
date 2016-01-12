@@ -1,7 +1,0 @@
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.pdb
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\Validation.dll
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\Validation.pdb
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\Validation.xml
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.dll
-E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.pdb
