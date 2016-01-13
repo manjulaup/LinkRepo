@@ -52,23 +52,20 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BusinessLayer">
-      <HintPath>C:\Users\User\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\BusinessLayer.dll</HintPath>
-    </Reference>
     <Reference Include="GSMCommShared">
-      <HintPath>C:\Users\User\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\GSMCommShared.dll</HintPath>
+      <HintPath>C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\GSMCommShared.dll</HintPath>
     </Reference>
     <Reference Include="GSMCommunication">
-      <HintPath>C:\Users\User\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\GSMCommunication.dll</HintPath>
+      <HintPath>C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\GSMCommunication.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>C:\Users\User\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\MySql.Data.dll</HintPath>
+      <HintPath>C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PDUConverter">
-      <HintPath>C:\Users\User\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\PDUConverter.dll</HintPath>
+      <HintPath>C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\PDUConverter.dll</HintPath>
     </Reference>
     <Reference Include="RS232">
-      <HintPath>C:\Users\User\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\RS232.dll</HintPath>
+      <HintPath>C:\Users\Techwire\Dropbox\Poker - Link Narural\Pahan\Link V1.0\AccountERP\bin\Debug\RS232.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

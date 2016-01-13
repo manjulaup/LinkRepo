@@ -5,3 +5,16 @@ E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\Validation.xml
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\GIT HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\GSMCommShared.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\GSMCommunication.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\MySql.Data.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\PDUConverter.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\RS232.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\Validation.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\Validation.pdb
+D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\Validation.xml
+D:\GIT HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\GIT HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.pdb

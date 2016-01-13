@@ -22,3 +22,7 @@ E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\bin\Debug\EntityHandler.dll
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\bin\Debug\EntityHandler.pdb
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\obj\Debug\EntityHandler.dll
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\EntityHandler\obj\Debug\EntityHandler.pdb
+D:\GIT HUB\Link V1.0\EntityHandler\bin\Debug\EntityHandler.dll
+D:\GIT HUB\Link V1.0\EntityHandler\bin\Debug\EntityHandler.pdb
+D:\GIT HUB\Link V1.0\EntityHandler\obj\Debug\EntityHandler.dll
+D:\GIT HUB\Link V1.0\EntityHandler\obj\Debug\EntityHandler.pdb

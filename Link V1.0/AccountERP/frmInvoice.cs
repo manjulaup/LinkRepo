@@ -27,14 +27,14 @@ namespace AccountERP
         private void frmInvoice_Load(object sender, EventArgs e)
         {
             MyCommon = new CommonOperations(Program.AccountStatic.LoggingAsLocal);
-            MyAccount = new AccountCreation(Program.AccountStatic.LoggingAsLocal);
-            MyInvoice = new Invoice(Program.AccountStatic.LoggingAsLocal);
+       //   MyAccount = new AccountCreation(Program.AccountStatic.LoggingAsLocal);
+       //   MyInvoice = new Invoice(Program.AccountStatic.LoggingAsLocal);
 
             panel1.Top = (this.Height - panel1.Height) / 2;
             panel1.Left = (this.Width - panel1.Width) / 2;
-            MyAccount.LoadCustomer(cmbSupplier);
-            MyCommon.LoadStatusComboAccount(cmbStatus, 4);
-            LoadList();
+            //MyAccount.LoadCustomer(cmbSupplier);
+            //MyCommon.LoadStatusComboAccount(cmbStatus, 4);
+            //LoadList();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -44,15 +44,15 @@ namespace AccountERP
 
         private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string supid = MyCommon.GetSelectedID(cmbSupplier, true);
-            int SupID1 = int.Parse(supid);
-            lblAccnumber.Text = MyAccount.GetCustomerAccountNumber(SupID1);
-            string curr = "";
-            decimal ExRate = MyAccount.GetExRate(lblAccnumber.Text, out curr);
-            lblExchangerate.Text = ExRate.ToString("#0.000");
-            lblCurrency.Text = curr;
-            MyInvoice.LoadInvoice(cmbGRN, SupID1);
-            txtpayterm.Text = MyAccount.GetCreditPeriod(SupID1,false).ToString();
+            //string supid = MyCommon.GetSelectedID(cmbSupplier, true);
+            //int SupID1 = int.Parse(supid);
+            //lblAccnumber.Text = MyAccount.GetCustomerAccountNumber(SupID1);
+            //string curr = "";
+            //decimal ExRate = MyAccount.GetExRate(lblAccnumber.Text, out curr);
+            //lblExchangerate.Text = ExRate.ToString("#0.000");
+            //lblCurrency.Text = curr;
+            //MyInvoice.LoadInvoice(cmbGRN, SupID1);
+            //txtpayterm.Text = MyAccount.GetCreditPeriod(SupID1,false).ToString();
 
         }
 

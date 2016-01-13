@@ -40,3 +40,10 @@ E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.p
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.dll
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.pdb
+D:\GIT HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+D:\GIT HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+D:\GIT HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
