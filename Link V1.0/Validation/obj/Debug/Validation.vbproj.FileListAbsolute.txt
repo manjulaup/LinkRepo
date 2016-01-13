@@ -17,3 +17,4 @@ D:\GIT HUB\Link V1.0\Validation\obj\Debug\Validation.vbproj.GenerateResource.Cac
 D:\GIT HUB\Link V1.0\Validation\obj\Debug\Validation.dll
 D:\GIT HUB\Link V1.0\Validation\obj\Debug\Validation.xml
 D:\GIT HUB\Link V1.0\Validation\obj\Debug\Validation.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\Validation\obj\Debug\Validation.vbprojResolveAssemblyReference.cache
