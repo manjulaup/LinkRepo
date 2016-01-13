@@ -1,0 +1,49 @@
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\bin\Debug\EntityHandler.dll
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\bin\Debug\EntityHandler.pdb
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+C:\Users\Techwire\Documents\porker\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+E:\Repo\PLLink_Finance\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+E:\Repo\PLLink_Finance\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+E:\Repo\PLLink_Finance\DataAccessHandler\bin\Debug\EntityHandler.dll
+E:\Repo\PLLink_Finance\DataAccessHandler\bin\Debug\EntityHandler.pdb
+E:\Repo\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+E:\Repo\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+E:\Repo\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\bin\Debug\EntityHandler.dll
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\bin\Debug\EntityHandler.pdb
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+E:\Link\Total backup\PLLink_Finance\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+E:\Link\New version\Project\Link\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+E:\Link\New version\Project\Link\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+E:\Link\New version\Project\Link\DataAccessHandler\bin\Debug\EntityHandler.dll
+E:\Link\New version\Project\Link\DataAccessHandler\bin\Debug\EntityHandler.pdb
+E:\Link\New version\Project\Link\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+E:\Link\New version\Project\Link\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+E:\Link\New version\Project\Link\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.pdb
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+F:\Techwire Lanka (Pvt) Ltd\GIT_HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.dll
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\DataAccessHandler.pdb
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.dll
+D:\GIT HUB\Link V1.0\DataAccessHandler\bin\Debug\EntityHandler.pdb
+D:\GIT HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.csprojResolveAssemblyReference.cache
+D:\GIT HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.dll
+D:\GIT HUB\Link V1.0\DataAccessHandler\obj\Debug\DataAccessHandler.pdb
