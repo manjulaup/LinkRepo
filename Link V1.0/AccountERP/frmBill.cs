@@ -51,6 +51,7 @@ namespace AccountERP
             EditScreen(false);
         }
 
+        //Add by manjula
         private void LoadSuppliers()
         {
             DataTable dt = new DataTable();
@@ -80,6 +81,7 @@ namespace AccountERP
 
         }
 
+        //add by manjula
         private void LoadGRN(LINKPayment objLink)
         {
             DataTable dt = new DataTable();
@@ -105,6 +107,35 @@ namespace AccountERP
                 cmbGRN.DataSource = dt;
                 cmbGRN.DisplayMember = "GRNNO";
                 cmbGRN.ValueMember = "GRNNOval";
+            }
+        }
+
+        //add by manjula
+        private void LoadGRNMaterial(LINKPayment objLink)
+        {
+            DataTable dt = new DataTable();
+            DataRow dr;
+
+            dt.Columns.Add("Amount");
+            dt.Columns.Add("PN");
+            dt.Columns.Add("Name");
+
+            LINKPayment[] objSupList = objService.GetGRNMaterial(objLink);
+            if (objSupList.Length > 0)
+            {
+                for (int j = 0; j < objSupList.Length; j++)
+                {
+
+                    dr = dt.NewRow();
+
+                    dr[0] = objSupList[j].Tot.ToString();
+                    dr[1] = objSupList[j].Value.ToString();
+                    dr[2] = objSupList[j].Description.ToString();
+
+                    dt.Rows.Add(dr.ItemArray);
+                }
+
+                dtpGRNDetals.DataSource = dt;
             }
         }
 
@@ -152,17 +183,20 @@ namespace AccountERP
         private void cmbGRN_SelectedIndexChanged(object sender, EventArgs e)
             {
                 // string supid = MyCommon.GetSelectedID(cmbSupplier,true);
-            //Edit by manjula
+                //Edit by manjula
                 string supid = "123456";
                 int SupID = int.Parse(supid);
                 //DataTable tb = MyBill.GetGRNData(cmbGRN.Text, SupID);
                 //MyCommon.LoadDatatoTableWithoutBind(dtpGRNDetals, tb, "Load GRN");
-                
+                LINKPayment objpayment=new LINKPayment();
+                objpayment.GRNNo = "99000";
+                LoadGRNMaterial(objpayment);
 
                 chkSelect.Checked = true;
                 calTotalValue();
                 txtDescription.Text = "Purchase of " + cmbGRN.Text;
             }
+
         private void LoadExtAccountInHiaraky(string KeyWord)
         {
 
@@ -438,8 +472,8 @@ namespace AccountERP
             foreach (DataGridViewRow item in dtpGRNDetals.Rows)
             {
                
-                    decimal Lt = decimal.Parse(item.Cells["dtpGRNDetals_Amount"].Value.ToString());
-                    total1 = total1 + Lt;
+                    //decimal Lt = decimal.Parse(item.Cells["dtpGRNDetals_Amount"].Value.ToString());
+                    //total1 = total1 + Lt;
                 
             }
             lblGrnToala.Text = total1.ToString("#0.00");
@@ -800,7 +834,7 @@ namespace AccountERP
             lblTotalVat.Text = "";
             lblTotalLKR.Text = "";
             lblTotalBillOutstanding.Text = "";
-            dtpGRNDetals.Rows.Clear();
+            //dtpGRNDetals.Rows.Clear();
 
         }
 

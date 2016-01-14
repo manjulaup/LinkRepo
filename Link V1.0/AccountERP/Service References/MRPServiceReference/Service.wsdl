@@ -37,6 +37,12 @@
   <wsdl:message name="Service_GetCreditorFinalGRN_OutputMessage">
     <wsdl:part name="parameters" element="GetCreditorFinalGRNResponse" />
   </wsdl:message>
+  <wsdl:message name="Service_GetGRNMaterial_InputMessage">
+    <wsdl:part name="parameters" element="GetGRNMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetGRNMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="GetGRNMaterialResponse" />
+  </wsdl:message>
   <wsdl:message name="Service_GetCustomerMaster_InputMessage">
     <wsdl:part name="parameters" element="GetCustomerMaster" />
   </wsdl:message>
@@ -63,6 +69,10 @@
     <wsdl:operation name="GetCreditorFinalGRN">
       <wsdl:input wsaw:Action="urn:Service/GetCreditorFinalGRN" message="Service_GetCreditorFinalGRN_InputMessage" />
       <wsdl:output wsaw:Action="urn:Service/GetCreditorFinalGRNResponse" message="Service_GetCreditorFinalGRN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGRNMaterial">
+      <wsdl:input wsaw:Action="urn:Service/GetGRNMaterial" message="Service_GetGRNMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service/GetGRNMaterialResponse" message="Service_GetGRNMaterial_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCustomerMaster">
       <wsdl:input wsaw:Action="urn:Service/GetCustomerMaster" message="Service_GetCustomerMaster_InputMessage" />

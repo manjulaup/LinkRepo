@@ -45,5 +45,7 @@ namespace EntityHandler
         public DateTime VoucherDate { get; set; }
         public DateTime ApproveDate { get; set; }
 
+        public string Description {get; set;}
+
     }
 }

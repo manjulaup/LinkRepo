@@ -119,7 +119,24 @@ namespace DataAccessHandler
             return dt;
         }
 
+        public DataTable DALGetGRNMaterial(LINKPayment objPayment)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand oSqlCommand = new SqlCommand();
+                string SqlQuery = "WCF_GRNMaterials";
 
+                oSqlCommand.Parameters.AddWithValue("@GRNNO", objPayment.GRNNo);
+                oSqlCommand.CommandText = SqlQuery;
+
+                dt = new DALBase().SelectSPMRP(oSqlCommand);
+                dt.TableName = "tblGRNMaterials";
+            }
+            catch (Exception ex)
+            { }
+            return dt;
+        }
 
     }
 }

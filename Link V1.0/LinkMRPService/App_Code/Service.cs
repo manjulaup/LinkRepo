@@ -50,6 +50,13 @@ public class Service
         return objBALPayment.BALGetFinalCreditorGRN(objPayment);
     }
 
+
+    [OperationContract]
+    public List<LINKPayment> GetGRNMaterial(LINKPayment objPayment)
+    {
+        return objBALPayment.BALGetGRNMaterial(objPayment);
+    }
+
     // Pahan Sri Madusanka Rodrigo
     BusinessHandler.CustomerMaster objCustomerMaster = new BusinessHandler.CustomerMaster();
     
@@ -58,4 +65,5 @@ public class Service
     {
         return objCustomerMaster.BALGetCustomerMaster();
     }
+
 }

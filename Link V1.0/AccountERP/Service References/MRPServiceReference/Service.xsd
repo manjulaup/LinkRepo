@@ -69,6 +69,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetGRNMaterial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="objPayment" nillable="true" type="q10:LINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGRNMaterialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetGRNMaterialResult" nillable="true" type="q11:ArrayOfLINKPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetCustomerMaster">
     <xs:complexType>
       <xs:sequence />
@@ -77,7 +91,7 @@
   <xs:element name="GetCustomerMasterResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCustomerMasterResult" nillable="true" type="q10:ArrayOfCustomerMaster" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EntityHandler" minOccurs="0" name="GetCustomerMasterResult" nillable="true" type="q12:ArrayOfCustomerMaster" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

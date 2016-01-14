@@ -16,6 +16,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LinkMRPService", "LinkMRPService\", "{2D7E266F-68B1-4B17-85B4-AF367A7E2A5A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{1AC4DC50-9785-46BA-A318-BEAFB3F8212F}|BusinessHandler.dll;{0B523BB6-A05E-4823-B895-F1C6FC0BAA4F}|DataAccessHandler.dll;{80CDD586-26A6-4B18-B5B5-2DF92FECE90E}|EntityHandler.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/LinkMRPService"
 		Debug.AspNetCompiler.PhysicalPath = "LinkMRPService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LinkMRPService\"

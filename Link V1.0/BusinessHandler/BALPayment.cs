@@ -196,6 +196,44 @@ namespace BusinessHandler
             return obj;
         }
 
-        
+
+        public List<LINKPayment> BALGetGRNMaterial(LINKPayment objPayment)
+        {
+
+            List<LINKPayment> listobj = new List<LINKPayment>();
+            DataTable dt = new DataTable();
+            try
+            {
+                DALPayment objDALPayment = new DALPayment();
+                dt = objDALPayment.DALGetGRNMaterial(objPayment);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    listobj.Add(ConvertToObjectGRNMaterial(dt.Rows[i]));
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return listobj;
+        }
+
+        private LINKPayment ConvertToObjectGRNMaterial(DataRow row)
+        {
+            LINKPayment obj = new LINKPayment();
+
+            try
+            {
+                obj.Tot = Convert.ToDecimal(row["AMOUNT"].ToString());
+                obj.Value =Convert.ToDecimal(row["PN"].ToString());
+                obj.Description = row["NAME"].ToString();
+
+            }
+            catch (Exception ex)
+            { }
+            return obj;
+        }
       }
 }

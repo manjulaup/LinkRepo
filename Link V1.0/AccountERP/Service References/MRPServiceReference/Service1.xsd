@@ -7,6 +7,7 @@
       <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="CreateUser" type="xs:int" />
       <xs:element minOccurs="0" name="CreditPeriod" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="GRNApprovedate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="GRNNo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />

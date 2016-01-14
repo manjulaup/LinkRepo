@@ -49,6 +49,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetGRNMaterial">
+      <soap:operation soapAction="urn:Service/GetGRNMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetCustomerMaster">
       <soap:operation soapAction="urn:Service/GetCustomerMaster" style="document" />
       <wsdl:input>
