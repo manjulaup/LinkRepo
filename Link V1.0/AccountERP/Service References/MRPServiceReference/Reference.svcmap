@@ -18,14 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://198.101.10.177/WCFMRP/Service.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/WCFLink/Service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="dd8af958-b360-48df-a612-58e94fc00c77" SourceId="1" SourceUrl="http://198.101.10.177/WCFMRP/Service.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="58c2cb7f-c91d-446b-8761-1dedfd12b43b" SourceId="1" SourceUrl="http://198.101.10.177/WCFMRP/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="bf392e33-ca06-455b-9474-610898b35686" SourceId="1" SourceUrl="http://198.101.10.177/WCFMRP/Service.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="5400ea5d-545f-40c5-afa6-525df4a98db6" SourceId="1" SourceUrl="http://198.101.10.177/WCFMRP/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="7982787b-0d45-48a6-b8c4-e9e15a84d3fe" SourceId="1" SourceUrl="http://198.101.10.177/WCFMRP/Service.svc?wsdl" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="b70befe2-853e-47ca-a026-680bac57a5c5" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service31.xsd" MetadataType="Schema" ID="486de56b-ca09-417f-b8ac-cc22abcaea7f" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service32.xsd" MetadataType="Schema" ID="d393d6d2-000e-48a0-a3d8-e165d1abbacb" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="cf909a1c-49d9-4452-a7d7-8dda5773c5c3" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?disco" />
+    <MetadataFile FileName="Service2.wsdl" MetadataType="Wsdl" ID="2ca02297-93ee-409c-b553-220eecdef8b9" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Service21.wsdl" MetadataType="Wsdl" ID="512ac91e-0e85-4715-85cc-ba46d89ff4b6" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

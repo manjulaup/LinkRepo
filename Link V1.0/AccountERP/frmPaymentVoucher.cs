@@ -11,14 +11,19 @@ using BusinessLayer.CommonOperation;
 using BusinessLayer.PaymentsAndReciept;
 using BusinessLayer.Supplier;
 using BusinessLayer.AccountTranactions;
+using EntityHandler;
+
 namespace AccountERP
 {
     public partial class frmPaymentVoucher : Form
     {
+        Finance.MRPServiceReference.ServiceClient objService = new Finance.MRPServiceReference.ServiceClient();
         private AccountCreation MyAccount = null;
         private CommonOperations MyCommon =null;
         private Payment MyPay=null ;
         private AccountTranaction MyTransaction = null;
+        private string PayToID = "";
+
         public frmPaymentVoucher()
         {
             InitializeComponent();
@@ -113,7 +118,10 @@ namespace AccountERP
             {
                 case "1":
                     btnBrowse.Enabled = true;
-                    MyAccount.LoadSupplier(cmbPayTo);
+                   // MyAccount.LoadSupplier(cmbPayTo);
+                    //Edited by Manjula
+                    LoadSuppliers();
+
                     txtToAccount.Enabled = false;
                     break;
                 case "2":
@@ -144,9 +152,41 @@ namespace AccountERP
 
         }
 
+        //Add by manjula
+        private void LoadSuppliers()
+        {
+            DataTable dt = new DataTable();
+            DataRow dr;
+
+            dt.Columns.Add("SupplierID");
+            dt.Columns.Add("SupplierName");
+
+            LINKPayment[] objSupList = objService.GetCreditorFinalSupplierList();
+            if (objSupList.Length > 0)
+            {
+                for (int j = 0; j < objSupList.Length; j++)
+                {
+
+                    dr = dt.NewRow();
+
+                    dr[0] = objSupList[j].SupName.ToString();
+                    dr[1] = objSupList[j].SupName.ToString();
+
+                    dt.Rows.Add(dr.ItemArray);
+                }
+
+                cmbPayTo.DataSource = dt;
+                cmbPayTo.DisplayMember = "SupplierID";
+                cmbPayTo.ValueMember = "SupplierName";
+                cmbPayTo.SelectedIndex = -1;
+
+            }
+
+        }
+
         private void cmbPayTo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Supplier MySupplier = new Supplier();
+            BusinessLayer.Supplier.Supplier MySupplier = new BusinessLayer.Supplier.Supplier();
             DataType.CustomerDataType _ExCustomer = new DataType.CustomerDataType();
             DataType.SupplierDataType _ExSupplier = new DataType.SupplierDataType();
             Customer  MyCustomer=new Customer ();
@@ -158,7 +198,7 @@ namespace AccountERP
             switch (PayTo)
             {
                 case "1":
-                    respond = MySupplier.GetSupplier(CusSupID, out _ExSupplier, Program.AccountStatic.LoggingAsLocal);
+                   // respond = MySupplier.GetSupplier(CusSupID, out _ExSupplier, Program.AccountStatic.LoggingAsLocal);
                     lblAddress.Text = _ExSupplier.Address1 + " " + _ExSupplier.Address2 + " " + _ExSupplier.Address3;
                     lblToID.Text = MyAccount.GetSupplierAccountNumber(CusSupID);
                     txtToAccount.Text = MyAccount.GetAccountName(lblToID.Text);
@@ -674,7 +714,18 @@ namespace AccountERP
             try
             {
                 panel14.Visible = true;
-                string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
+                //string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
+                //Edited by Manjula
+                string SupName = cmbPayTo.SelectedValue.ToString();
+                LINKPayment objLink = new LINKPayment();
+                objLink.SupName=SupName;
+                LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+                if (objSuppID.Length > 0)
+                {
+                    PayToID = objSuppID[0].SupplierID.ToString();
+                }
+
                 int CusSupID = int.Parse(PayToID);
                 DataTable tb = MyPay.GetPendingBillList(CusSupID);
                 MyCommon.LoadDatatoTableWithoutBind(dgvBillList, tb, "Load Peng bill");
@@ -1012,6 +1063,23 @@ namespace AccountERP
             else
                 e.Cancel = true;
             CalTotalLine(); 
+        }
+
+        //Added by Manjula
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                panel15.Visible = true;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+
+            }
         }
 
     }

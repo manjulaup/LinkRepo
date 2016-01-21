@@ -245,15 +245,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\MRPServiceReference\Service.wsdl" />
-    <None Include="Service References\MRPServiceReference\Service.xsd">
+    <None Include="Service References\MRPServiceReference\Service2.wsdl" />
+    <None Include="Service References\MRPServiceReference\Service21.wsdl" />
+    <None Include="Service References\MRPServiceReference\Service3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MRPServiceReference\Service1.wsdl" />
-    <None Include="Service References\MRPServiceReference\Service1.xsd">
+    <None Include="Service References\MRPServiceReference\Service31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MRPServiceReference\Service2.xsd">
+    <None Include="Service References\MRPServiceReference\Service32.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -306,6 +306,7 @@
   <ItemGroup>
     <Content Include="Adobe - Image Ready %282%29.ico" />
     <Content Include="Avast %282%29.ico" />
+    <None Include="Service References\MRPServiceReference\Service.disco" />
     <None Include="Service References\MRPServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

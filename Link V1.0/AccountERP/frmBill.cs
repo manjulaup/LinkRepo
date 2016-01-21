@@ -23,6 +23,7 @@ namespace AccountERP
         private CommonOperations MyCommon = null;
         private AccountTranaction MyTransaction = null;
         private Billing MyBill = null;
+        private string supid = "0";
 
         public frmBill()
         {
@@ -43,10 +44,10 @@ namespace AccountERP
             panel1.Top = (this.Height - panel1.Height) / 2;
             panel1.Left = (this.Width - panel1.Width) / 2;
             //MyAccount.LoadSupplier(cmbSupplier);
+            //MyAccount.LoadSupplier(cmbSearchSupplier);
             //Edit by manjula   *** Load suppliers from MRP
             LoadSuppliers();
 
-            MyAccount.LoadSupplier(cmbSearchSupplier);
             MyCommon.LoadStatusComboAccount(cmbStatus, 4);
             EditScreen(false);
         }
@@ -77,6 +78,12 @@ namespace AccountERP
                 cmbSupplier.DataSource = dt;
                 cmbSupplier.DisplayMember = "SupplierID";
                 cmbSupplier.ValueMember = "SupplierName";
+                cmbSupplier.SelectedIndex = 0;
+
+                cmbSearchSupplier.DataSource = dt;
+                cmbSearchSupplier.DisplayMember = "SupplierID";
+                cmbSearchSupplier.ValueMember = "SupplierName";
+                cmbSearchSupplier.SelectedIndex = 0;
             }
 
         }
@@ -117,8 +124,9 @@ namespace AccountERP
             DataRow dr;
 
             dt.Columns.Add("Amount");
-            dt.Columns.Add("PN");
+            dt.Columns.Add("Qty");
             dt.Columns.Add("Name");
+            dt.Columns.Add("AccNo");
 
             LINKPayment[] objSupList = objService.GetGRNMaterial(objLink);
             if (objSupList.Length > 0)
@@ -128,13 +136,26 @@ namespace AccountERP
 
                     dr = dt.NewRow();
 
-                    dr[0] = objSupList[j].Tot.ToString();
-                    dr[1] = objSupList[j].Value.ToString();
+                    dr[0] = Math.Round(objSupList[j].Tot,2);
+                    dr[1] = Math.Round(objSupList[j].Value,2);
                     dr[2] = objSupList[j].Description.ToString();
+                    dr[3] = objSupList[j].AccNo.ToString();
 
                     dt.Rows.Add(dr.ItemArray);
                 }
 
+                dtpGRNDetals.Columns.Clear();
+                DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn();
+                checkColumn.TrueValue = true;
+                checkColumn.FalseValue = false;
+                checkColumn.Name = "Select";
+                checkColumn.HeaderText = "Select";
+                checkColumn.Width = 50;
+                checkColumn.ReadOnly = false;
+                checkColumn.FillWeight = 10; //if the datagridview is resized (on form resize) the checkbox won't take up too much; value is relative to the other columns' fill values
+                dtpGRNDetals.Columns.Add(checkColumn);
+
+                dtpGRNDetals.DataSource = null;
                 dtpGRNDetals.DataSource = dt;
             }
         }
@@ -143,12 +164,21 @@ namespace AccountERP
             {
                 //string supid = MyCommon.GetSelectedID(cmbSupplier,true);
                 //Edit by manjula
-                string SupName = "LAKWIN  ENTERPRISES";
-                string supid = "10519";    
+                string SupName = cmbSupplier.SelectedValue.ToString();
+                string CreditPeriod = "";
+                LINKPayment objLink = new LINKPayment();
+                objLink.SupName=SupName;
+                LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+                if (objSuppID.Length > 0)
+                {
+                    supid = objSuppID[0].SupplierID.ToString();
+                    CreditPeriod = objSuppID[0].CreditPeriod.ToString();
+                }
 
                 int SupID1 = int.Parse(supid);
-                //lblAccnumber.Text = MyAccount.GetSupplierAccountNumber(SupID1);
-                lblAccnumber.Text = "1295090";
+                lblAccnumber.Text = "1295090";  //**************** need to load suuplier acc here
+
                 string curRate = "";
                 decimal ExRate = MyAccount.GetExRate(lblAccnumber.Text, out curRate);
                 lblExchangerate.Text = ExRate.ToString("#0.000");
@@ -161,14 +191,13 @@ namespace AccountERP
                // MyBill.LoadGRNNumbers(cmbGRN, SupID1);
                // txtpayterm.Text = MyAccount.GetCreditPeriod(SupID1, true).ToString();
                // lblTotalBillOutstanding.Text = MyBill.GetTotalOutstanding(SupID1).ToString("##0.00");
-               LINKPayment objLink=new LINKPayment();
-                objLink.SupName=SupName;
                 LoadGRN(objLink);
 
-                txtpayterm.Text = "999";
-                lblTotalBillOutstanding.Text = "9.99";
+                txtpayterm.Text = CreditPeriod;
+                lblTotalBillOutstanding.Text = "frm finance db";  //**************** need to load tot outsatnding of suuplier here
 
             }
+
         private void CalTotalGRNAmount()
         {
             decimal total = 0;
@@ -184,19 +213,55 @@ namespace AccountERP
             {
                 // string supid = MyCommon.GetSelectedID(cmbSupplier,true);
                 //Edit by manjula
-                string supid = "123456";
+                //string supid = "0";
+                //string SupName = cmbSupplier.SelectedValue.ToString();
+                //LINKPayment objLink = new LINKPayment();
+                //objLink.SupName = SupName;
+                //LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+                //if (objSuppID.Length > 0)
+                //{
+                //    supid = objSuppID[0].SupplierID.ToString();
+                //}
+
                 int SupID = int.Parse(supid);
                 //DataTable tb = MyBill.GetGRNData(cmbGRN.Text, SupID);
                 //MyCommon.LoadDatatoTableWithoutBind(dtpGRNDetals, tb, "Load GRN");
                 LINKPayment objpayment=new LINKPayment();
-                objpayment.GRNNo = "99000";
+                objpayment.GRNNo = cmbGRN.SelectedValue.ToString();
                 LoadGRNMaterial(objpayment);
 
                 chkSelect.Checked = true;
-                calTotalValue();
+                //calTotalValue(); 
                 txtDescription.Text = "Purchase of " + cmbGRN.Text;
             }
 
+        //Edited by manjula
+        private void btnAddSummary_Click(object sender, EventArgs e)
+        {   //Edited by manjula
+            MakeSelectedAccountDetails();
+
+            decimal totvalue = 0;
+            bool flag = false;
+
+            for (int i = 0; i < dtpGRNDetals.Rows.Count; i++)
+            {
+                //Assume that 0th Row of grid named grdDisplayAll contains Checkbox
+                if (Convert.ToBoolean(dtpGRNDetals.Rows[i].Cells[0].Value) == true)
+                {
+                    totvalue = totvalue + Convert.ToDecimal(dtpGRNDetals.Rows[i].Cells["Amount"].Value);
+                    flag = true;
+                }
+            }
+
+            if (flag)
+            {
+                lblGrnToala.Text = totvalue.ToString();
+            }
+
+        }
+
+        //=============================================================================================
         private void LoadExtAccountInHiaraky(string KeyWord)
         {
 
@@ -322,7 +387,9 @@ namespace AccountERP
                 _SaveData.Description = txtDescription.Text;
                 _SaveData.FCr = decimal.Parse(lblTotalUSD.Text);
                 _SaveData.PayToCatID = 0;
-                _SaveData.PayToID = int.Parse(MyCommon.GetSelectedID(cmbSupplier, true));
+                //_SaveData.PayToID = int.Parse(MyCommon.GetSelectedID(cmbSupplier, true));
+                //Edited by manjula
+                _SaveData.PayToID = Convert.ToInt32(supid);
                 _SaveData.TobePayDate = DateTime.Parse(lblDueDate.Text);
                 _SaveData.TrUser = Program.AccountStatic.UserName;
                 _SaveData.TrDate = dtpInvoiceDate.Value;
@@ -406,8 +473,8 @@ namespace AccountERP
                 if (!MyBill.ExistBilling(_SaveData.BillNo, _SaveData.PayToID))
                 {
                     int BillStatus = -1;
-                    int SupID = int.Parse(MyCommon.GetSelectedID(cmbSupplier, true));
-                    BillStatus = MyBill.GetBillStatus(cmbGRN.Text, SupID);
+                    int SupID = Convert.ToInt32(supid);
+                    BillStatus = MyBill.GetBillStatus(cmbGRN.Text, Convert.ToInt32(supid));
                     if (BillStatus == 0)
                     {
 
@@ -480,21 +547,22 @@ namespace AccountERP
         }
         private void chkSelect_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkSelect.Checked)
-            {
-                foreach (DataGridViewRow item in dtpGRNDetals.Rows)
-                {
-                    item.Cells["dtpGRNDetals_Select"].Value = "1";
-                }
-            }
-            else
-            {
-                foreach (DataGridViewRow item in dtpGRNDetals.Rows)
-                {
-                    item.Cells["dtpGRNDetals_Select"].Value = "0";
-                }
-            }
-            calTotalValue();
+            //Commited by manju
+            //if (chkSelect.Checked)
+            //{
+            //    foreach (DataGridViewRow item in dtpGRNDetals.Rows)
+            //    {
+            //        item.Cells["dtpGRNDetals_Select"].Value = "1";
+            //    }
+            //}
+            //else
+            //{
+            //    foreach (DataGridViewRow item in dtpGRNDetals.Rows)
+            //    {
+            //        item.Cells["dtpGRNDetals_Select"].Value = "0";
+            //    }
+            //}
+            //calTotalValue();
         }
         private int ExistInGrid(int IndexID)
         {
@@ -536,34 +604,30 @@ namespace AccountERP
             dgvAccount.Rows[IndexID].Cells["dgvAccount_VAT"].Value =( Vat + Vat1).ToString("##0.00");
 
         }
-        private void btnAddSummary_Click(object sender, EventArgs e)
-        {
-            MakeSelectedAccountDetails();
-        }
-
+  
         private void MakeSelectedAccountDetails()
         {
             dgvAccount.Rows.Clear();
             foreach (DataGridViewRow item in dtpGRNDetals.Rows)
             {
-                if (item.Cells["dtpGRNDetals_Select"].Value.ToString () == "1")
+                if ( Convert.ToBoolean(item.Cells["Select"].Value))
                 {
                      int i = -1;
-                     string AcName = MyAccount.GetAccountName(item.Cells["dtpGRNDetals_AcNumber"].Value.ToString());
+                     string AcName = MyAccount.GetAccountName(item.Cells["AccNo"].Value.ToString());
                      string Memo1 = "Purchase of " + AcName + " - " + cmbGRN.Text;
                      decimal Exrate = 0;
                      bool rmd = decimal.TryParse(lblExchangerate.Text, out Exrate);
-                    i = ExistInGrid( item.Cells["dtpGRNDetals_AcNumber"].Value.ToString());
+                    i = ExistInGrid( item.Cells["AccNo"].Value.ToString());
 
                     decimal LKR = 0, d2 = 0,USD=0;
-                    bool resp = decimal.TryParse(item.Cells["dtpGRNDetals_Amount"].Value.ToString(), out USD);
+                    bool resp = decimal.TryParse(item.Cells["Amount"].Value.ToString(), out USD);
                     LKR = USD * Exrate;
                     resp = decimal.TryParse(txtVat.Text, out d2);
 
                      if (i == -1)
                     {
                         int Ref = dgvAccount.Rows.Count + 1;
-                        string[] row1 = { item.Cells["dtpGRNDetals_AcNumber"].Value.ToString(), AcName, Memo1, LKR.ToString("#0.00"),USD.ToString ("##0.00"), d2.ToString("#0.00"),GetNextLinNumber("dgvAccount_LineRef")};
+                        string[] row1 = { item.Cells["AccNo"].Value.ToString(), AcName, Memo1, LKR.ToString("#0.00"),USD.ToString ("##0.00"), d2.ToString("#0.00"),GetNextLinNumber("dgvAccount_LineRef")};
                         dgvAccount.Rows.Add(row1);
                     }
                     else
@@ -578,7 +642,18 @@ namespace AccountERP
 
         private void brnShow_Click(object sender, EventArgs e)
         {
-            LoadBillList(MyCommon.GetSelectedID(cmbSearchSupplier, true));
+            //Edited by manjula
+            string SupName = cmbSearchSupplier.SelectedValue.ToString();
+            LINKPayment objLink = new LINKPayment();
+            objLink.SupName = SupName;
+            LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+            if (objSuppID.Length > 0)
+            {
+                supid = objSuppID[0].SupplierID.ToString();
+            }
+            LoadBillList(supid);
+    
         }
         
         private void LoadBillList(string SupID)
@@ -620,7 +695,9 @@ namespace AccountERP
             {
                 DataTable tb = MyBill.GetBillList(InvoiceNumber);
                 MyCommon.LoadDatatoTableWithoutBind(dgvAccount, tb, "load Details");
-                cmbSupplier.Text = cmb.GetReleventTextFromID(cmbSupplier, _ExtData.PayToID.ToString(), true);
+                //cmbSupplier.Text = cmb.GetReleventTextFromID(cmbSupplier, _ExtData.PayToID.ToString(), true);
+                //Edited by manjula
+
                 cmbSupplier_SelectedIndexChanged(null, null);
                 cmbGRN.Text = _ExtData.BillNo;
                 cmbGRN_SelectedIndexChanged(null, null);
@@ -650,11 +727,11 @@ namespace AccountERP
             int BillStatus = -1;
             if (MessageBox.Show("Do you want send to Approval ? ","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== System.Windows.Forms.DialogResult.Yes)
             {
-            int SupID= int.Parse(MyCommon.GetSelectedID(cmbSupplier ,true ));
+            int SupID= int.Parse(supid);
             BillStatus = MyBill.GetBillStatus(cmbGRN.Text,SupID);
             if (BillStatus==0)
             {
-                string respond=MyBill .SendToapproveval (cmbGRN.Text,Program .AccountStatic .UserName , SupID);
+                string respond=MyBill .SendToapproveval(cmbGRN.Text,Program .AccountStatic .UserName , SupID);
                 if (respond =="True")
                     Program.InformationMessage ("Successfully Send to Approval");
                 else 
@@ -684,7 +761,21 @@ namespace AccountERP
              int BillStatus = -1;
             if (MessageBox.Show("Do you want Approved This ? ","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== System.Windows.Forms.DialogResult.Yes)
             {
-            int SupID= int.Parse(MyCommon.GetSelectedID(cmbSupplier ,true ));
+            //int SupID= int.Parse(MyCommon.GetSelectedID(cmbSupplier ,true ));
+            //Edited by manjula
+                string SupName = cmbSupplier.SelectedValue.ToString();
+                string CreditPeriod = "";
+                LINKPayment objLink = new LINKPayment();
+                objLink.SupName = SupName;
+                LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+                if (objSuppID.Length > 0)
+                {
+                    supid = objSuppID[0].SupplierID.ToString();
+                    CreditPeriod = objSuppID[0].CreditPeriod.ToString();
+                }
+
+                int SupID=Convert.ToInt32(supid);
             BillStatus = MyBill.GetBillStatus(cmbGRN.Text,SupID);
             if (BillStatus==1)
             {
@@ -719,7 +810,22 @@ namespace AccountERP
             if (MessageBox.Show("Do you want post to account ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 MyTransaction = new AccountTranaction(Program.AccountStatic.LoggingAsLocal);
-                int SupID = int.Parse(MyCommon.GetSelectedID(cmbSupplier, true));
+               // int SupID = int.Parse(MyCommon.GetSelectedID(cmbSupplier, true));
+                //Edited by manjula
+                string SupName = cmbSupplier.SelectedValue.ToString();
+                string CreditPeriod = "";
+                LINKPayment objLink = new LINKPayment();
+                objLink.SupName = SupName;
+                LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+                if (objSuppID.Length > 0)
+                {
+                    supid = objSuppID[0].SupplierID.ToString();
+                    CreditPeriod = objSuppID[0].CreditPeriod.ToString();
+                }
+
+                int SupID = Convert.ToInt32(supid);
+
                 BillStatus = MyBill.GetBillStatus(cmbGRN.Text, SupID);
                 if (BillStatus == 2)
                 {

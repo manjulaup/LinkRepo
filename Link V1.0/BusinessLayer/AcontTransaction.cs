@@ -974,7 +974,11 @@ namespace BusinessLayer.AccountTranactions
                                 }
                                 else
                                 {
-                                  respond =  SetBillGetToLog(_SaveData.BillNo, _SaveData.PayToID);
+                                  //respond =  SetBillGetToLog(_SaveData.BillNo, _SaveData.PayToID);
+                                    //Edit by manjula
+                                    //********************************* need to update tblmaterials
+
+
                                     Mytrans.Commit();
                                     CurCon.Close();
                                     return "True";

@@ -229,6 +229,7 @@ namespace BusinessHandler
                 obj.Tot = Convert.ToDecimal(row["AMOUNT"].ToString());
                 obj.Value =Convert.ToDecimal(row["PN"].ToString());
                 obj.Description = row["NAME"].ToString();
+                obj.AccNo = row["AccNo"].ToString();
 
             }
             catch (Exception ex)

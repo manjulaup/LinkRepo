@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBill));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnCLear = new System.Windows.Forms.Button();
@@ -92,12 +91,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtpGRNDetals = new System.Windows.Forms.DataGridView();
-            this.dtpGRNDetals_Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dtpGRNDetals_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpGRNDetals_PartNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpGRNDetals_PartName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpGRNDetals_AcNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpGRNDetals_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chkSelect = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btnAddSummary = new System.Windows.Forms.Button();
@@ -276,7 +269,6 @@
             this.panel10.BackColor = System.Drawing.Color.Silver;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel10.Controls.Add(this.lblDownIndex);
-            this.panel10.Controls.Add(this.HanchyGrid);
             this.panel10.Controls.Add(this.txtMomo);
             this.panel10.Controls.Add(this.label8);
             this.panel10.Controls.Add(this.label17);
@@ -311,20 +303,20 @@
             // HanchyGrid
             // 
             this.HanchyGrid.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HanchyGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HanchyGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
             this.HanchyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HanchyGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HanchyGrid_AcID,
             this.HanchyGrid_Name,
             this.HanchyGrid_Type,
             this.HanchyGrid_Currency});
-            this.HanchyGrid.Location = new System.Drawing.Point(6, 60);
+            this.HanchyGrid.Location = new System.Drawing.Point(634, 9);
             this.HanchyGrid.Name = "HanchyGrid";
             this.HanchyGrid.RowHeadersWidth = 4;
             this.HanchyGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.HanchyGrid.Size = new System.Drawing.Size(456, 58);
+            this.HanchyGrid.Size = new System.Drawing.Size(35, 31);
             this.HanchyGrid.TabIndex = 31;
             this.HanchyGrid.Visible = false;
             this.HanchyGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HanchyGrid_CellDoubleClick);
@@ -355,10 +347,10 @@
             // 
             // txtMomo
             // 
-            this.txtMomo.Location = new System.Drawing.Point(224, 19);
+            this.txtMomo.Location = new System.Drawing.Point(224, 33);
             this.txtMomo.Multiline = true;
             this.txtMomo.Name = "txtMomo";
-            this.txtMomo.Size = new System.Drawing.Size(272, 36);
+            this.txtMomo.Size = new System.Drawing.Size(272, 22);
             this.txtMomo.TabIndex = 27;
             // 
             // label8
@@ -384,8 +376,8 @@
             // dgvAccount
             // 
             this.dgvAccount.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvAccount_ID,
@@ -424,22 +416,22 @@
             // 
             // dgvAccount_Amount
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvAccount_Amount.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvAccount_Amount.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvAccount_Amount.HeaderText = "LKR";
             this.dgvAccount_Amount.Name = "dgvAccount_Amount";
             // 
             // dgvAccount_Fcr
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvAccount_Fcr.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvAccount_Fcr.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgvAccount_Fcr.HeaderText = "Fcur";
             this.dgvAccount_Fcr.Name = "dgvAccount_Fcr";
             // 
             // dgvAccount_VAT
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvAccount_VAT.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvAccount_VAT.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvAccount_VAT.HeaderText = "VAT";
             this.dgvAccount_VAT.Name = "dgvAccount_VAT";
             this.dgvAccount_VAT.Width = 75;
@@ -467,11 +459,11 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::Finance.Properties.Resources.Button_AddToCart2;
             this.btnAdd.Location = new System.Drawing.Point(613, 30);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(52, 27);
             this.btnAdd.TabIndex = 29;
+            this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -581,6 +573,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.Silver;
             this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.HanchyGrid);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(3, 418);
@@ -697,59 +690,14 @@
             // dtpGRNDetals
             // 
             this.dtpGRNDetals.AllowUserToAddRows = false;
+            this.dtpGRNDetals.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtpGRNDetals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtpGRNDetals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtpGRNDetals_Select,
-            this.dtpGRNDetals_Amount,
-            this.dtpGRNDetals_PartNo,
-            this.dtpGRNDetals_PartName,
-            this.dtpGRNDetals_AcNumber,
-            this.dtpGRNDetals_Ref});
             this.dtpGRNDetals.Location = new System.Drawing.Point(0, 34);
             this.dtpGRNDetals.Name = "dtpGRNDetals";
             this.dtpGRNDetals.RowHeadersWidth = 4;
             this.dtpGRNDetals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtpGRNDetals.Size = new System.Drawing.Size(358, 378);
             this.dtpGRNDetals.TabIndex = 0;
-            // 
-            // dtpGRNDetals_Select
-            // 
-            this.dtpGRNDetals_Select.FalseValue = "0";
-            this.dtpGRNDetals_Select.HeaderText = " Select";
-            this.dtpGRNDetals_Select.Name = "dtpGRNDetals_Select";
-            this.dtpGRNDetals_Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtpGRNDetals_Select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dtpGRNDetals_Select.TrueValue = "1";
-            this.dtpGRNDetals_Select.Width = 50;
-            // 
-            // dtpGRNDetals_Amount
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dtpGRNDetals_Amount.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dtpGRNDetals_Amount.HeaderText = "Amount";
-            this.dtpGRNDetals_Amount.Name = "dtpGRNDetals_Amount";
-            // 
-            // dtpGRNDetals_PartNo
-            // 
-            this.dtpGRNDetals_PartNo.HeaderText = "PN#";
-            this.dtpGRNDetals_PartNo.Name = "dtpGRNDetals_PartNo";
-            this.dtpGRNDetals_PartNo.Width = 75;
-            // 
-            // dtpGRNDetals_PartName
-            // 
-            this.dtpGRNDetals_PartName.HeaderText = "Name";
-            this.dtpGRNDetals_PartName.Name = "dtpGRNDetals_PartName";
-            this.dtpGRNDetals_PartName.Width = 200;
-            // 
-            // dtpGRNDetals_AcNumber
-            // 
-            this.dtpGRNDetals_AcNumber.HeaderText = "Acc";
-            this.dtpGRNDetals_AcNumber.Name = "dtpGRNDetals_AcNumber";
-            // 
-            // dtpGRNDetals_Ref
-            // 
-            this.dtpGRNDetals_Ref.HeaderText = "Ref";
-            this.dtpGRNDetals_Ref.Name = "dtpGRNDetals_Ref";
             // 
             // chkSelect
             // 
@@ -863,11 +811,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(378, 85);
+            this.label6.Location = new System.Drawing.Point(389, 85);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 15);
+            this.label6.Size = new System.Drawing.Size(77, 15);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Invoice Number";
+            this.label6.Text = "GRN Number";
             // 
             // label13
             // 
@@ -890,11 +838,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(393, 57);
+            this.label3.Location = new System.Drawing.Point(404, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 15);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Invoice Date";
+            this.label3.Text = "GRN Date";
             // 
             // dtpInvoiceDate
             // 
@@ -1048,8 +996,8 @@
             // 
             // dgvBillList_TotalAmount
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvBillList_TotalAmount.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvBillList_TotalAmount.DefaultCellStyle = dataGridViewCellStyle30;
             this.dgvBillList_TotalAmount.HeaderText = "Amount";
             this.dgvBillList_TotalAmount.Name = "dgvBillList_TotalAmount";
             // 
@@ -1060,15 +1008,15 @@
             // 
             // dgvBillList_CurRate
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvBillList_CurRate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvBillList_CurRate.DefaultCellStyle = dataGridViewCellStyle31;
             this.dgvBillList_CurRate.HeaderText = "Ex Rate";
             this.dgvBillList_CurRate.Name = "dgvBillList_CurRate";
             // 
             // dgvBillList_LKR
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvBillList_LKR.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvBillList_LKR.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgvBillList_LKR.HeaderText = "LKR";
             this.dgvBillList_LKR.Name = "dgvBillList_LKR";
             // 
@@ -1254,12 +1202,6 @@
         private System.Windows.Forms.DateTimePicker dtpBilingDate;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.CheckBox chkSelect;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dtpGRNDetals_Select;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtpGRNDetals_Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtpGRNDetals_PartNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtpGRNDetals_PartName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtpGRNDetals_AcNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtpGRNDetals_Ref;
         private System.Windows.Forms.Label lblGrnToala;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cmbStatus;

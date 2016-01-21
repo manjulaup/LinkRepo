@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPaymentVoucher));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.chkAsAdvancePayment = new System.Windows.Forms.CheckBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblCurrentcy = new System.Windows.Forms.Label();
@@ -160,7 +161,9 @@
             this.lblFormdescription = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.chkAsAdvancePayment = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -184,6 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentList)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -219,6 +224,16 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(985, 62);
             this.panel10.TabIndex = 16;
+            // 
+            // chkAsAdvancePayment
+            // 
+            this.chkAsAdvancePayment.AutoSize = true;
+            this.chkAsAdvancePayment.Location = new System.Drawing.Point(228, 33);
+            this.chkAsAdvancePayment.Name = "chkAsAdvancePayment";
+            this.chkAsAdvancePayment.Size = new System.Drawing.Size(187, 20);
+            this.chkAsAdvancePayment.TabIndex = 16;
+            this.chkAsAdvancePayment.Text = "As a Advance Payment";
+            this.chkAsAdvancePayment.UseVisualStyleBackColor = true;
             // 
             // lblBalance
             // 
@@ -323,6 +338,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.panel14);
             this.panel2.Controls.Add(this.btnBrowse);
             this.panel2.Controls.Add(this.lblAddress);
             this.panel2.Controls.Add(this.txtExRate);
@@ -340,9 +357,9 @@
             // 
             this.btnBrowse.Enabled = false;
             this.btnBrowse.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(567, 4);
+            this.btnBrowse.Location = new System.Drawing.Point(563, 29);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(51, 23);
+            this.btnBrowse.Size = new System.Drawing.Size(68, 23);
             this.btnBrowse.TabIndex = 12;
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -518,6 +535,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.panel15);
             this.panel3.Controls.Add(this.HanchyGrid);
             this.panel3.Controls.Add(this.lblToID);
             this.panel3.Controls.Add(this.txtToAccount);
@@ -553,9 +571,9 @@
             // HanchyGrid
             // 
             this.HanchyGrid.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HanchyGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HanchyGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.HanchyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HanchyGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HanchyGrid_AcID,
@@ -734,11 +752,11 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::Finance.Properties.Resources.Button_AddToCart2;
             this.btnAdd.Location = new System.Drawing.Point(914, 21);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(64, 26);
             this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -754,8 +772,8 @@
             // dgvAccList
             // 
             this.dgvAccList.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvAccList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvAccList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvAccList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvAccList_AccountID,
@@ -769,14 +787,14 @@
             this.dgvAccList_Ref});
             this.dgvAccList.Location = new System.Drawing.Point(4, 53);
             this.dgvAccList.Name = "dgvAccList";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccList.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccList.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvAccList.RowHeadersWidth = 4;
             this.dgvAccList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccList.Size = new System.Drawing.Size(975, 194);
@@ -809,15 +827,15 @@
             // 
             // dgvAccList_Vat
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvAccList_Vat.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvAccList_Vat.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvAccList_Vat.HeaderText = "VAT";
             this.dgvAccList_Vat.Name = "dgvAccList_Vat";
             // 
             // dgvAccList_Amount
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvAccList_Amount.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvAccList_Amount.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvAccList_Amount.HeaderText = "LKR";
             this.dgvAccList_Amount.Name = "dgvAccList_Amount";
             // 
@@ -1025,7 +1043,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.panel14);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -1044,7 +1061,7 @@
             this.panel14.Controls.Add(this.chkAutoFill);
             this.panel14.Controls.Add(this.dgvBillList);
             this.panel14.ForeColor = System.Drawing.Color.Blue;
-            this.panel14.Location = new System.Drawing.Point(335, 102);
+            this.panel14.Location = new System.Drawing.Point(449, 58);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(530, 227);
             this.panel14.TabIndex = 13;
@@ -1063,17 +1080,17 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(163, 4);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 15);
+            this.label19.Size = new System.Drawing.Size(112, 16);
             this.label19.TabIndex = 10;
             this.label19.Text = "Settle Amount";
             // 
             // btnAddToList
             // 
-            this.btnAddToList.Image = global::Finance.Properties.Resources.Button_AddToCart2;
             this.btnAddToList.Location = new System.Drawing.Point(469, 0);
             this.btnAddToList.Name = "btnAddToList";
             this.btnAddToList.Size = new System.Drawing.Size(58, 23);
             this.btnAddToList.TabIndex = 2;
+            this.btnAddToList.Text = "ADD";
             this.btnAddToList.UseVisualStyleBackColor = true;
             this.btnAddToList.Click += new System.EventHandler(this.btnAddToList_Click);
             // 
@@ -1082,7 +1099,7 @@
             this.chkAutoFill.AutoSize = true;
             this.chkAutoFill.Location = new System.Drawing.Point(3, 3);
             this.chkAutoFill.Name = "chkAutoFill";
-            this.chkAutoFill.Size = new System.Drawing.Size(54, 19);
+            this.chkAutoFill.Size = new System.Drawing.Size(59, 20);
             this.chkAutoFill.TabIndex = 1;
             this.chkAutoFill.Text = "Auto";
             this.chkAutoFill.UseVisualStyleBackColor = true;
@@ -1368,15 +1385,34 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // chkAsAdvancePayment
+            // button1
             // 
-            this.chkAsAdvancePayment.AutoSize = true;
-            this.chkAsAdvancePayment.Location = new System.Drawing.Point(228, 33);
-            this.chkAsAdvancePayment.Name = "chkAsAdvancePayment";
-            this.chkAsAdvancePayment.Size = new System.Drawing.Size(187, 20);
-            this.chkAsAdvancePayment.TabIndex = 16;
-            this.chkAsAdvancePayment.Text = "As a Advance Payment";
-            this.chkAsAdvancePayment.UseVisualStyleBackColor = true;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(563, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Pending";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.dataGridView1);
+            this.panel15.Location = new System.Drawing.Point(103, 80);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(660, 188);
+            this.panel15.TabIndex = 17;
+            this.panel15.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 14);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(628, 160);
+            this.dataGridView1.TabIndex = 0;
             // 
             // frmPaymentVoucher
             // 
@@ -1420,6 +1456,8 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1552,5 +1590,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAccList__ExcRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAccList_Ref;
         private System.Windows.Forms.CheckBox chkAsAdvancePayment;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
