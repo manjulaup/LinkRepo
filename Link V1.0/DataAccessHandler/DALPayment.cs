@@ -130,6 +130,7 @@ namespace DataAccessHandler
                 string SqlQuery = "WCF_GRNMaterials";
 
                 oSqlCommand.Parameters.AddWithValue("@GRNNO", objPayment.GRNNo);
+                oSqlCommand.Parameters.AddWithValue("@Status", objPayment.Status);
                 oSqlCommand.CommandText = SqlQuery;
 
                 dt = new DALBase().SelectSPMRP(oSqlCommand);

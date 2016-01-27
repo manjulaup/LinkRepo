@@ -230,6 +230,7 @@ namespace BusinessHandler
                 obj.Value =Convert.ToDecimal(row["PN"].ToString());
                 obj.Description = row["NAME"].ToString();
                 obj.AccNo = row["AccNo"].ToString();
+                obj.MaterialCode = row["MaterialCode"].ToString();
 
             }
             catch (Exception ex)

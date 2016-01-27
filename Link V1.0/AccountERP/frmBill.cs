@@ -25,6 +25,7 @@ namespace AccountERP
         private AccountTranaction MyTransaction = null;
         private Billing MyBill = null;
         private string supid = "0";
+        private int StatusAll = 0;
 
         public frmBill()
         {
@@ -128,6 +129,7 @@ namespace AccountERP
             dt.Columns.Add("Qty");
             dt.Columns.Add("Name");
             dt.Columns.Add("AccNo");
+            dt.Columns.Add("MaterialCode");
 
             LINKPayment[] objSupList = objService.GetGRNMaterial(objLink);
             if (objSupList.Length > 0)
@@ -141,6 +143,7 @@ namespace AccountERP
                     dr[1] = Math.Round(objSupList[j].Value,2);
                     dr[2] = objSupList[j].Description.ToString();
                     dr[3] = objSupList[j].AccNo.ToString();
+                    dr[4] = objSupList[j].MaterialCode.ToString();
 
                     dt.Rows.Add(dr.ItemArray);
                 }
@@ -244,6 +247,7 @@ namespace AccountERP
                 //MyCommon.LoadDatatoTableWithoutBind(dtpGRNDetals, tb, "Load GRN");
                 LINKPayment objpayment=new LINKPayment();
                 objpayment.GRNNo = cmbGRN.SelectedValue.ToString();
+                objpayment.Status = StatusAll;
                 LoadGRNMaterial(objpayment);
 
                 chkSelect.Checked = true;
@@ -495,22 +499,38 @@ namespace AccountERP
 
                         if (respond == "True")
                         {
-                           // respond = MyBill.Save(_SaveData);
-                            respond = "True";
+                           respond = MyBill.Save(_SaveData);
+
                             if (respond == "True")
                             {
-                                //update matirail
                                 //Edit by manjula
                                 //********************************* update tblmaterials
                                 bool res = false;
-                                LINKPayment objList = new LINKPayment();
-                                objList.Status = 9;
-                                objList.GRNNo = "239218";
-                                objList.MaterialCode = "ST/FIL/MG";
-                                res = objService.SetMaterialStatus(objList);
+                                LINKPayment objList;
+                                
+
+                                for (int i = 0; i < dtpGRNDetals.Rows.Count; i++)
+                                {
+                                    if (Convert.ToBoolean(dtpGRNDetals.Rows[i].Cells[0].Value) == true)
+                                    {
+                                        objList = new LINKPayment();
+                                        objList.Status = 9;
+                                        objList.GRNNo = cmbGRN.SelectedValue.ToString();
+                                        objList.MaterialCode = dtpGRNDetals.Rows[i].Cells["MaterialCode"].Value.ToString();
+
+                                        res = objService.SetMaterialStatus(objList);
+                                    }
+                                }
+
 
                                 Program.InformationMessage("Record saved successfully");
-                                LoadBillList(MyCommon.GetSelectedID(cmbSupplier, true));
+                               // LoadBillList(MyCommon.GetSelectedID(cmbSupplier, true));
+                                LoadBillList(SupID.ToString());
+                                LINKPayment objLink = new LINKPayment();
+                                objLink.SupName = cmbSupplier.SelectedValue.ToString();
+
+                                //Added by manju
+                                LoadGRN(objLink);
 
                             }
                             else
@@ -726,7 +746,10 @@ namespace AccountERP
 
                 cmbSupplier_SelectedIndexChanged(null, null);
                 cmbGRN.Text = _ExtData.BillNo;
+                //Added by Manju
+                StatusAll = 9;
                 cmbGRN_SelectedIndexChanged(null, null);
+                StatusAll = 0;
                 txtDescription.Text = _ExtData.Description;
                 dtpBilingDate.Value = _ExtData.BillDate;
                 lblExchangerate.Text = _ExtData.CurRate.ToString("#0.00");
