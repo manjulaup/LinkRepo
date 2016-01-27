@@ -50,11 +50,16 @@ public class Service
         return objBALPayment.BALGetFinalCreditorGRN(objPayment);
     }
 
-
     [OperationContract]
     public List<LINKPayment> GetGRNMaterial(LINKPayment objPayment)
     {
         return objBALPayment.BALGetGRNMaterial(objPayment);
+    }
+
+    [OperationContract]
+    public bool SetMaterialStatus(LINKPayment objPayment)
+    {
+        return objBALPayment.BALUpdateMaterial(objPayment);
     }
 
     // Pahan Sri Madusanka Rodrigo

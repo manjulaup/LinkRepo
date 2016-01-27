@@ -77,7 +77,9 @@ namespace DataAccessHandler
                 dt.TableName = "tblSupplier";
             }
             catch (Exception ex)
-            { }
+            {
+                
+            }
             return dt;
         }
 
@@ -136,6 +138,31 @@ namespace DataAccessHandler
             catch (Exception ex)
             { }
             return dt;
+        }
+
+        public bool DALUpdateMaterial(LINKPayment objPayment)
+        {
+            bool result = false;
+
+            try
+            {
+                SqlCommand oSqlCommand = new SqlCommand();
+                string SqlQuery = "WCF_UpdateStatusGRNMateril";
+                oSqlCommand.Parameters.AddWithValue("@Status", objPayment.Status);
+                oSqlCommand.Parameters.AddWithValue("@GRNNO", objPayment.GRNNo);
+                oSqlCommand.Parameters.AddWithValue("@MaterialCode", objPayment.MaterialCode);
+                oSqlCommand.CommandText = SqlQuery;
+                result = new DALBase().UpdateMRP(oSqlCommand);
+            }
+            catch (Exception ex)
+            {
+
+                StreamWriter file2 = new StreamWriter(@"c:\file.txt", true);
+                file2.WriteLine(ex.ToString() + "- " + DateTime.Now + "- meeeeeeeeeeeee");
+                file2.Close();
+            }
+
+            return result;
         }
 
     }

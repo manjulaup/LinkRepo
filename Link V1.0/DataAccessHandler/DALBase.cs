@@ -34,6 +34,28 @@ namespace DataAccessHandler
             return dt;
         }
 
+        public bool UpdateMRP(SqlCommand oSqlCommand)
+        {
+            bool status = false;
+            int rowAffected = 0;
+            try
+            {
+                SqlConnection conn = DALConnManager.OpenMRP();
+                oSqlCommand.Connection = conn;
+                oSqlCommand.CommandType = CommandType.StoredProcedure;
+
+                rowAffected = oSqlCommand.ExecuteNonQuery();
+                DALConnManager.Close(conn);
+                if (rowAffected > 0)
+                    status = true;
+            }
+            catch (SqlException ex)
+            {
+                throw;
+            }
+            return status;
+        }
+
         //FOR Finance
         public DataTable SelectSPFinance(SqlCommand oSqlCommand)
         {

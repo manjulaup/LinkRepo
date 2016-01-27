@@ -29,6 +29,7 @@ namespace EntityHandler
 
         public string GRNNo { get; set; }
         public DateTime GRNApprovedate { get; set; }
+        public string MaterialCode { get; set; }
 
         public string InvoiceID { get; set; }
         public int ID { set; get; }

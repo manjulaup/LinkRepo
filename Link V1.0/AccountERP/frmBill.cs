@@ -195,10 +195,11 @@ namespace AccountERP
                 LoadGRN(objLink);
 
                 txtpayterm.Text = CreditPeriod;
-                lblTotalBillOutstanding.Text = GetOutstandingBill(SupID1).ToString();  //**************** need to load tot outsatnding of suuplier here
+                lblTotalBillOutstanding.Text = GetOutstandingBill(SupID1).ToString();  //**************** load tot outsatnding of suuplier here
 
             }
 
+        //Added By Manju
         private decimal GetOutstandingBill(int supid) 
         {
             decimal totuot=0;
@@ -206,7 +207,7 @@ namespace AccountERP
             DataRow dr = MyCommon.GetDataRowAccount("select sum(FCr) as sum from tblpendingpayablebill  where supplier='" + supid + "' and billstatus=0", "Get Oustanding Bill");
             if (dr != null)
             {
-                totuot = Convert.ToDecimal(dr["sum"]);
+                bool resp = decimal.TryParse(dr["sum"].ToString(), out totuot);
             }
 
             return totuot;
@@ -494,9 +495,20 @@ namespace AccountERP
 
                         if (respond == "True")
                         {
-                            respond = MyBill.Save(_SaveData);
+                           // respond = MyBill.Save(_SaveData);
+                            respond = "True";
                             if (respond == "True")
                             {
+                                //update matirail
+                                //Edit by manjula
+                                //********************************* update tblmaterials
+                                bool res = false;
+                                LINKPayment objList = new LINKPayment();
+                                objList.Status = 9;
+                                objList.GRNNo = "239218";
+                                objList.MaterialCode = "ST/FIL/MG";
+                                res = objService.SetMaterialStatus(objList);
+
                                 Program.InformationMessage("Record saved successfully");
                                 LoadBillList(MyCommon.GetSelectedID(cmbSupplier, true));
 

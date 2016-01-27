@@ -13,10 +13,14 @@ using DataLayer.DataService;
 using System.Threading;
 using System.Drawing;
 using BusinessLayer.Invoices;
+using EntityHandler;
+using BusinessHandler;
+
 namespace BusinessLayer.AccountTranactions
 {
     public class AccountTranaction
     {
+        
         private DataService Mycommon;
         private CommonOperations MyGeneral;
       
@@ -975,9 +979,6 @@ namespace BusinessLayer.AccountTranactions
                                 else
                                 {
                                   //respond =  SetBillGetToLog(_SaveData.BillNo, _SaveData.PayToID);
-                                    //Edit by manjula
-                                    //********************************* need to update tblmaterials
-
 
                                     Mytrans.Commit();
                                     CurCon.Close();
@@ -990,8 +991,7 @@ namespace BusinessLayer.AccountTranactions
             }
             catch (Exception ex)
             {
-
-                return ex.Message;
+               return ex.Message;
             }
            
         }

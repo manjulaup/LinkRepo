@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f5c63a7c-ffdb-4e4f-bcbf-72401da79d32" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WCFLink/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="4f41680a-cdb7-4b53-bbb4-6b14c59d8b5f" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="81610848-cb6a-4bf5-ae88-89e72bdf1d5a" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="dd861243-168f-4665-bf3f-b0ee1f2a0a1d" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="e93083ab-46cd-401a-9c3f-4fceecaa9f62" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?disco" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="2d8ffd6f-206a-4ae5-9a75-4e7dcecf1c31" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="f6f58463-04a7-43e2-a9b6-7aff11c230de" SourceId="1" SourceUrl="http://localhost/WCFLink/Service.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

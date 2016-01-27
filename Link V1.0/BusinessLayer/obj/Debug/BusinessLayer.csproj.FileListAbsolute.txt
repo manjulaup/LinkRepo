@@ -19,3 +19,10 @@ D:\GIT HUB\Link V1.0\BusinessLayer\bin\Debug\Validation.xml
 D:\GIT HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\GIT HUB\Link V1.0\BusinessLayer\obj\Debug\BusinessLayer.pdb
 E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\BusinessHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\EntityHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\DataAccessHandler.dll
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\BusinessHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\EntityHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessLayer\bin\Debug\DataAccessHandler.pdb

@@ -236,5 +236,12 @@ namespace BusinessHandler
             { }
             return obj;
         }
+
+        public bool BALUpdateMaterial(LINKPayment objPayment)
+        {
+            DALPayment objDALPayment = new DALPayment();
+
+            return objDALPayment.DALUpdateMaterial(objPayment);
+        }
       }
 }

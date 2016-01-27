@@ -33,6 +33,9 @@ namespace Finance.MRPServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="urn:Service/GetGRNMaterial", ReplyAction="urn:Service/GetGRNMaterialResponse")]
         EntityHandler.LINKPayment[] GetGRNMaterial(EntityHandler.LINKPayment objPayment);
         
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service/SetMaterialStatus", ReplyAction="urn:Service/SetMaterialStatusResponse")]
+        bool SetMaterialStatus(EntityHandler.LINKPayment objPayment);
+        
         [System.ServiceModel.OperationContractAttribute(Action="urn:Service/GetCustomerMaster", ReplyAction="urn:Service/GetCustomerMasterResponse")]
         EntityHandler.CustomerMaster[] GetCustomerMaster();
     }
@@ -86,6 +89,10 @@ namespace Finance.MRPServiceReference {
         
         public EntityHandler.LINKPayment[] GetGRNMaterial(EntityHandler.LINKPayment objPayment) {
             return base.Channel.GetGRNMaterial(objPayment);
+        }
+        
+        public bool SetMaterialStatus(EntityHandler.LINKPayment objPayment) {
+            return base.Channel.SetMaterialStatus(objPayment);
         }
         
         public EntityHandler.CustomerMaster[] GetCustomerMaster() {
