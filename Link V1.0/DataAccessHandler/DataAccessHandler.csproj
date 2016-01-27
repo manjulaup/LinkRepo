@@ -50,6 +50,7 @@
     <Compile Include="DALBase.cs" />
     <Compile Include="DALConnManager.cs" />
     <Compile Include="DALPayment.cs" />
+    <Compile Include="DALBill.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleDetails.cs" />

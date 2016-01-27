@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 /// </summary>
 public class DALConnManager
 {
+
 	public DALConnManager()
 	{
 		//

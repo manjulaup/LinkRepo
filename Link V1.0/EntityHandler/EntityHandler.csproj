@@ -44,6 +44,7 @@
     <Compile Include="Bank.cs" />
     <Compile Include="BankAccount.cs" />
     <Compile Include="BaseRolePrivileges.cs" />
+    <Compile Include="Bill.cs" />
     <Compile Include="ChoseBank.cs" />
     <Compile Include="CreditorPayment.cs" />
     <Compile Include="CustomerMaster.cs" />

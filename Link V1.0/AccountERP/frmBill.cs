@@ -12,6 +12,7 @@ using BusinessLayer.Billings;
 using BusinessLayer.AccountTranactions;
 using BusinessLayer.Supplier;
 using EntityHandler;
+using BusinessHandler;
 
 namespace AccountERP
 {
@@ -177,7 +178,7 @@ namespace AccountERP
                 }
 
                 int SupID1 = int.Parse(supid);
-                lblAccnumber.Text = "1295090";  //**************** need to load suuplier acc here
+                lblAccnumber.Text = "3001";  //**************** need to load suuplier acc here
 
                 string curRate = "";
                 decimal ExRate = MyAccount.GetExRate(lblAccnumber.Text, out curRate);
@@ -194,9 +195,22 @@ namespace AccountERP
                 LoadGRN(objLink);
 
                 txtpayterm.Text = CreditPeriod;
-                lblTotalBillOutstanding.Text = "frm finance db";  //**************** need to load tot outsatnding of suuplier here
+                lblTotalBillOutstanding.Text = GetOutstandingBill(SupID1).ToString();  //**************** need to load tot outsatnding of suuplier here
 
             }
+
+        private decimal GetOutstandingBill(int supid) 
+        {
+            decimal totuot=0;
+
+            DataRow dr = MyCommon.GetDataRowAccount("select sum(FCr) as sum from tblpendingpayablebill  where supplier='" + supid + "' and billstatus=0", "Get Oustanding Bill");
+            if (dr != null)
+            {
+                totuot = Convert.ToDecimal(dr["sum"]);
+            }
+
+            return totuot;
+        }
 
         private void CalTotalGRNAmount()
         {

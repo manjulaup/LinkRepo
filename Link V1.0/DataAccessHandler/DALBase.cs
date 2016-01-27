@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.IO;
 
+
 namespace DataAccessHandler
 {
     public class DALBase
