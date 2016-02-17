@@ -19,10 +19,11 @@ namespace AccountERP
     {
         Finance.MRPServiceReference.ServiceClient objService = new Finance.MRPServiceReference.ServiceClient();
         private AccountCreation MyAccount = null;
-        private CommonOperations MyCommon =null;
-        private Payment MyPay=null ;
+        private CommonOperations MyCommon = null;
+        private Payment MyPay = null;
         private AccountTranaction MyTransaction = null;
         private string PayToID = "";
+        public string SuppID = "";
 
         public frmPaymentVoucher()
         {
@@ -45,7 +46,7 @@ namespace AccountERP
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message );
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -54,30 +55,30 @@ namespace AccountERP
             MyAccount.GetAccountListByCat(Program.AccountStatic.CompanyID, cmbFromAcc, 1);
             MyCommon.LoadStatusComboAccount(cmbPayMethod, 2);
             MyCommon.LoadStatusComboAccount(cmbPayFor, 3);
-            MyCommon.LoadStatusComboAccount(cmbStatus, 4); 
- 
+            MyCommon.LoadStatusComboAccount(cmbStatus, 4);
+
             LoadExtPaymentList();
         }
         private void LoadExtPaymentList()
         {
-            DataTable tb=MyPay.GetSerchPayList(1,1,2);
-            MyCommon .LoadDatatoTableWithoutBind (dgvPaymentList,tb,"Load DAta List");
+            DataTable tb = MyPay.GetSerchPayList(1, 1, 2);
+            MyCommon.LoadDatatoTableWithoutBind(dgvPaymentList, tb, "Load DAta List");
 
         }
         private void frmPaymentVoucher_Paint(object sender, PaintEventArgs e)
         {
-           
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-           
-           this.Dispose ();
+
+            this.Dispose();
         }
 
         private void cmbPayMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string PAyMethod=MyCommon.GetSelectedID(cmbPayMethod, true);
+            string PAyMethod = MyCommon.GetSelectedID(cmbPayMethod, true);
 
             switch (PAyMethod)
             {
@@ -107,7 +108,7 @@ namespace AccountERP
                     cmbFromAcc.Enabled = true;
                     break;
             }
-           
+
         }
 
         private void cmbPayFor_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace AccountERP
             {
                 case "1":
                     btnBrowse.Enabled = true;
-                   // MyAccount.LoadSupplier(cmbPayTo);
+                    // MyAccount.LoadSupplier(cmbPayTo);
                     //Edited by Manjula
                     LoadSuppliers();
 
@@ -135,7 +136,7 @@ namespace AccountERP
                     btnBrowse.Enabled = false;
                     break;
                 case "4":
-                    MyAccount.LoadSubContractors (cmbPayTo);
+                    MyAccount.LoadSubContractors(cmbPayTo);
                     btnBrowse.Enabled = false;
                     txtToAccount.Enabled = true;
                     break;
@@ -145,7 +146,7 @@ namespace AccountERP
                     txtToAccount.Enabled = true;
                     break;
                 default:
-                      btnBrowse.Enabled = false;
+                    btnBrowse.Enabled = false;
                     txtToAccount.Enabled = true;
                     break;
             }
@@ -186,19 +187,35 @@ namespace AccountERP
 
         private void cmbPayTo_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            //Added by Manjula
+            string SupName = "";
+            if (cmbPayTo.SelectedValue != null)
+            {
+                SupName = cmbPayTo.SelectedValue.ToString();
+            }
+            LINKPayment objLink = new LINKPayment();
+            objLink.SupName = SupName;
+            LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+            if (objSuppID.Length > 0)
+            {
+                SuppID = objSuppID[0].SupplierID.ToString();
+            }
+
             BusinessLayer.Supplier.Supplier MySupplier = new BusinessLayer.Supplier.Supplier();
             DataType.CustomerDataType _ExCustomer = new DataType.CustomerDataType();
             DataType.SupplierDataType _ExSupplier = new DataType.SupplierDataType();
-            Customer  MyCustomer=new Customer ();
+            Customer MyCustomer = new Customer();
             string PayTo = MyCommon.GetSelectedID(cmbPayFor, true);
             string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
             int CusSupID = 0;
             bool resp5 = int.TryParse(PayToID, out CusSupID);
-            string respond = ""; 
+            string respond = "";
             switch (PayTo)
             {
                 case "1":
-                   // respond = MySupplier.GetSupplier(CusSupID, out _ExSupplier, Program.AccountStatic.LoggingAsLocal);
+                    // respond = MySupplier.GetSupplier(CusSupID, out _ExSupplier, Program.AccountStatic.LoggingAsLocal);
                     lblAddress.Text = _ExSupplier.Address1 + " " + _ExSupplier.Address2 + " " + _ExSupplier.Address3;
                     lblToID.Text = MyAccount.GetSupplierAccountNumber(CusSupID);
                     txtToAccount.Text = MyAccount.GetAccountName(lblToID.Text);
@@ -212,20 +229,20 @@ namespace AccountERP
                     txtToAccount.Text = MyAccount.GetAccountName(lblToID.Text);
                     txtToAccount.Enabled = false;
                     HanchyGrid.Visible = false;
-                 break ;
+                    break;
                 case "5":
-                 lblToID.Text = "";
-                 txtToAccount.Text = "";
-                 txtToAccount.Enabled = true;
-                lblAddress.Text = MyAccount.GetOtherPayeeAdd(cmbPayTo.Text);
+                    lblToID.Text = "";
+                    txtToAccount.Text = "";
+                    txtToAccount.Enabled = true;
+                    lblAddress.Text = MyAccount.GetOtherPayeeAdd(cmbPayTo.Text);
                     break;
                 default:
-                     lblToID.Text = "";
-                 txtToAccount.Text = "";
+                    lblToID.Text = "";
+                    txtToAccount.Text = "";
                     txtToAccount.Enabled = true;
                     break;
             }
- 
+
         }
 
         private void btnCheque_Click(object sender, EventArgs e)
@@ -239,7 +256,7 @@ namespace AccountERP
         {
             DataTable tb = MyPay.GetProjectList();
             MyCommon.LoadDatatoTableWithoutBind(dgvProject, tb, "Load JOBS");
-            pnlProject .Visible=true ;
+            pnlProject.Visible = true;
         }
 
         private void btnJob_Leave(object sender, EventArgs e)
@@ -262,18 +279,18 @@ namespace AccountERP
 
         private void dgvProject_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtJobNumber .Text =dgvProject .Rows[e.RowIndex ].Cells[0].Value .ToString ();
+            txtJobNumber.Text = dgvProject.Rows[e.RowIndex].Cells[0].Value.ToString();
             pnlProject.Visible = false;
         }
 
         private void dgvProject_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape )
-                pnlProject .Visible =false ;
+            if (e.KeyCode == Keys.Escape)
+                pnlProject.Visible = false;
         }
-        private int  ExsitAccNo(string  AccNo)
+        private int ExsitAccNo(string AccNo)
         {
-            int ExAccno=int.Parse (AccNo);
+            int ExAccno = int.Parse(AccNo);
             foreach (DataGridViewRow item in dgvAccList.Rows)
             {
                 if (ExAccno == int.Parse(item.Cells["dgvAccList_AccountID"].Value.ToString()))
@@ -283,24 +300,24 @@ namespace AccountERP
             return -1;
         }
         private string GetNextLinNumber(string ColID)
-            {
+        {
             int FinalMaxN = 1;
             List<int> Nlist = new List<int>();
             if (dgvAccList.Rows.Count > 0)
-                {
+            {
                 foreach (DataGridViewRow r in dgvAccList.Rows)
-                    {
+                {
                     string ln = r.Cells[ColID].Value.ToString();
                     int N = 0;
                     bool resp = int.TryParse(ln, out N);
                     Nlist.Add(N);
-                    }
+                }
                 FinalMaxN = MyCommon.GetMaxNumber(Nlist);
                 return FinalMaxN.ToString();
-                }
+            }
             else
                 return "1";
-            }
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (MyAccount.ExistAccountCreation(lblToID.Text))
@@ -312,10 +329,10 @@ namespace AccountERP
 
                 if (!resp)
                     Lref = -1;
-                else 
+                else
                     Lref = ExistTable(lblLRef.Text);
 
-              
+
                 decimal LKR = 0;
                 decimal USD1 = 0;
                 decimal ExRate = 0;
@@ -327,7 +344,7 @@ namespace AccountERP
 
 
 
-                if (Lref !=-1)
+                if (Lref != -1)
                 {
                     dgvAccList.Rows[Lref].Cells[0].Value = lblToID.Text;
                     dgvAccList.Rows[Lref].Cells[1].Value = txtToAccount.Text;
@@ -340,9 +357,9 @@ namespace AccountERP
                 }
                 else
                 {
-                    string[] Oneline = { AccNo, txtToAccount.Text, txtToMemo.Text, txtJobNumber.Text, VAT.ToString("##0.00"), LKR.ToString("#00.00"), USD1.ToString("#00.00"),ExRate.ToString ("##0.00"), GetNextLinNumber("dgvAccList_Ref") };
+                    string[] Oneline = { AccNo, txtToAccount.Text, txtToMemo.Text, txtJobNumber.Text, VAT.ToString("##0.00"), LKR.ToString("#00.00"), USD1.ToString("#00.00"), ExRate.ToString("##0.00"), GetNextLinNumber("dgvAccList_Ref") };
                     dgvAccList.Rows.Add(Oneline);
-                    
+
                 }
                 CalTotalLine();
                 ClearUpperLine();
@@ -350,50 +367,50 @@ namespace AccountERP
             else
             {
                 Program.VerningMessage("Invalied Account Number");
- 
+
             }
-         }
+        }
 
         private void AddBillAmount()
+        {
+            string respond = "";
+            decimal TobePaytotalAmount = 0;
+            decimal TotalPayBill = 0;
+            bool resp = decimal.TryParse(txttotalAmount.Text, out TobePaytotalAmount);
+
+            foreach (DataGridViewRow r in dgvBillList.Rows)
             {
-                string respond="";
-                decimal TobePaytotalAmount=0;
-                decimal TotalPayBill=0;
-                bool resp=decimal .TryParse(txttotalAmount.Text ,out TobePaytotalAmount);
-                
-                foreach (DataGridViewRow r in dgvBillList.Rows)
-	            {
-		            if (chkAutoFill.Checked)
-                        {
-                            if (r.Cells["dgvBillList_Select"].Value.ToString ()=="1")
-                                {
-                                    decimal d=0;
-                                    resp =decimal .TryParse (r.Cells["dgvBillList_Cr"].Value.ToString (),out d);
-                                    TotalPayBill=TotalPayBill+ d;
-                                    if ((TobePaytotalAmount<TotalPayBill) || (TobePaytotalAmount==TotalPayBill))
-                                        {
-                                                
-                                        }
-                                }
-                        }
-                    else
+                if (chkAutoFill.Checked)
+                {
+                    if (r.Cells["dgvBillList_Select"].Value.ToString() == "1")
+                    {
+                        decimal d = 0;
+                        resp = decimal.TryParse(r.Cells["dgvBillList_Cr"].Value.ToString(), out d);
+                        TotalPayBill = TotalPayBill + d;
+                        if ((TobePaytotalAmount < TotalPayBill) || (TobePaytotalAmount == TotalPayBill))
                         {
 
                         }
-	            }
+                    }
+                }
+                else
+                {
 
+                }
             }
+
+        }
 
         private void cmbFromAcc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string  GetFromAccID="";
-            GetFromAccID= MyCommon.GetSelectedID ( cmbFromAcc,true  );
+            string GetFromAccID = "";
+            GetFromAccID = MyCommon.GetSelectedID(cmbFromAcc, true);
             string Currentcy = "";
             txtExRate.Text = MyAccount.GetExRate(GetFromAccID, out Currentcy).ToString();
             lblCurrentcy.Text = Currentcy;
-            decimal FinalBalance=0;
+            decimal FinalBalance = 0;
             string rspt = MyAccount.GetFinalBalance(GetFromAccID, Program.AccountStatic.CurrentAccPeriod, out FinalBalance);
-          lblBalance.Text =FinalBalance.ToString ("##0.00");
+            lblBalance.Text = FinalBalance.ToString("##0.00");
             if (GetFromAccID == "10000")
             {
                 ComboboxItem cmb = new ComboboxItem();
@@ -406,9 +423,9 @@ namespace AccountERP
         }
         private void LoadExtAccountInHiaraky(string KeyWord)
         {
-           
-            DataTable tb = MyAccount.GetAccountListForDDL(KeyWord, Program.AccountStatic.CompanyID, 1,true);
-             try
+
+            DataTable tb = MyAccount.GetAccountListForDDL(KeyWord, Program.AccountStatic.CompanyID, 1, true);
+            try
             {
                 if (tb != null)
                     HanchyGrid.Visible = true;
@@ -419,7 +436,7 @@ namespace AccountERP
 
                 else
                     HanchyGrid.Height = 240;
-             MyCommon.LoadDatatoTableWithoutBind( HanchyGrid,tb,"Load Accounts");
+                MyCommon.LoadDatatoTableWithoutBind(HanchyGrid, tb, "Load Accounts");
 
             }
             catch (Exception ex)
@@ -431,66 +448,66 @@ namespace AccountERP
         }
         private void SaveOtherPayyee()
         {
- 
+
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-       
-                if (MessageBox.Show("Do you want to save current record ? ", "Confirmation ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    int VoucherStatus = MyPay.GetPVNStatus(txtPVNno.Text);
-                    switch (VoucherStatus)
-                    {
 
-                        case 2:
-                            Program.InformationMessage("This is aproval payment voucher, cannot chage");
-                            break;
-                        case 3:
-                            Program.InformationMessage("Already Accounted, cannot chage");
-                            break;
-                        default:
-                            if (!MyPay.ExistPayment_General(txtPVNno.Text))
+            if (MessageBox.Show("Do you want to save current record ? ", "Confirmation ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                int VoucherStatus = MyPay.GetPVNStatus(txtPVNno.Text);
+                switch (VoucherStatus)
+                {
+
+                    case 2:
+                        Program.InformationMessage("This is aproval payment voucher, cannot chage");
+                        break;
+                    case 3:
+                        Program.InformationMessage("Already Accounted, cannot chage");
+                        break;
+                    default:
+                        if (!MyPay.ExistPayment_General(txtPVNno.Text))
+                        {
+                            AccountTypes.Payment_GeneralDataType _SaveHeader = new AccountTypes.Payment_GeneralDataType();
+                            string respond = "";
+                            string PVN = "";
+                            string SelItem = MyCommon.GetSelectedID(cmbPayFor, true);
+                            if (SelItem == "5")
                             {
-                                AccountTypes.Payment_GeneralDataType _SaveHeader = new AccountTypes.Payment_GeneralDataType();
-                                string respond = "";
-                                string PVN = "";
-                                string SelItem = MyCommon.GetSelectedID(cmbPayFor, true);
-                                if (SelItem == "5")
-                                {
-                                    MyAccount.SaveotherPayee(cmbPayTo.Text, lblAddress.Text);
-                                }
-                                respond = SetHeaderDatatoClass(out _SaveHeader);
+                                MyAccount.SaveotherPayee(cmbPayTo.Text, lblAddress.Text);
+                            }
+                            respond = SetHeaderDatatoClass(out _SaveHeader);
+                            if (respond == "True")
+                            {
+
+                                respond = MyPay.SavePayment_General(_SaveHeader, out PVN);
                                 if (respond == "True")
                                 {
-
-                                    respond = MyPay.SavePayment_General(_SaveHeader, out PVN);
-                                    if (respond == "True")
-                                    {
-                                        txtPVNno.Text = PVN;
-                                        LoadExtPaymentList();
-                                        MessageBox.Show("Data Saved Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    }
-                                    else
-                                    {
-                                        txtPVNno.Text = "";
-                                        Program.VerningMessage(respond);
-
-                                    }
+                                    txtPVNno.Text = PVN;
+                                    LoadExtPaymentList();
+                                    MessageBox.Show("Data Saved Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
+                                else
+                                {
+                                    txtPVNno.Text = "";
+                                    Program.VerningMessage(respond);
 
+                                }
                             }
-                            else
-                            {
-                                Program.VerningMessage("Use Update Button");
-                            }
-                            break;
-                    }
+
+                        }
+                        else
+                        {
+                            Program.VerningMessage("Use Update Button");
+                        }
+                        break;
                 }
-           
+            }
+
         }
-        private string SetDetailDataToClass(out List < AccountTypes.Payment_GeneralDetailsDataType> _SaveDetailList)
+        private string SetDetailDataToClass(out List<AccountTypes.Payment_GeneralDetailsDataType> _SaveDetailList)
         {
-        MyPay = new Payment(Program.AccountStatic.LoggingAsLocal);
+            MyPay = new Payment(Program.AccountStatic.LoggingAsLocal);
             _SaveDetailList = new List<AccountTypes.Payment_GeneralDetailsDataType>();
             try
             {
@@ -500,13 +517,13 @@ namespace AccountERP
                     _OneItem.AccID = OneRow.Cells["dgvAccList_AccountID"].Value.ToString();
                     _OneItem.Description = OneRow.Cells["dgvAccList_Memo"].Value.ToString();
                     bool resp = false;
-                    decimal Dr = 0, FDr = 0, Vat = 0,Lexrare=0;
-                    resp = decimal.TryParse(OneRow.Cells["dgvAccList_Amount"].Value.ToString(),out Dr);
+                    decimal Dr = 0, FDr = 0, Vat = 0, Lexrare = 0;
+                    resp = decimal.TryParse(OneRow.Cells["dgvAccList_Amount"].Value.ToString(), out Dr);
                     resp = decimal.TryParse(OneRow.Cells["dgvAccList_Fcur"].Value.ToString(), out FDr);
                     resp = decimal.TryParse(OneRow.Cells["dgvAccList_Vat"].Value.ToString(), out Vat);
                     resp = decimal.TryParse(OneRow.Cells["dgvAccList__ExcRate"].Value.ToString(), out Lexrare);
                     _OneItem.Dr = Dr;
-                    _OneItem.Fdr = FDr ;
+                    _OneItem.Fdr = FDr;
                     _OneItem.ItemNo = int.Parse(OneRow.Cells["dgvAccList_Ref"].Value.ToString());
                     _OneItem.PvnNo = txtPVNno.Text;
                     _OneItem.Vat = Vat;
@@ -527,7 +544,7 @@ namespace AccountERP
             _SaveHeader = new AccountTypes.Payment_GeneralDataType();
             try
             {
-               
+
                 _SaveHeader.AccountID = MyCommon.GetSelectedID(cmbFromAcc, true);
                 _SaveHeader.ChequeNumber = cmbMethodObg.Text;
                 _SaveHeader.Cr = decimal.Parse(txtToalAmountLKR.Text);
@@ -540,7 +557,7 @@ namespace AccountERP
                 _SaveHeader.TrUser = Program.AccountStatic.UserName;
                 _SaveHeader.CompanyID = Program.AccountStatic.CompanyID;
                 _SaveHeader.AccPeriod = Program.AccountStatic.CurrentAccPeriod;
-                _SaveHeader.PayToCatID =int.Parse( MyCommon.GetSelectedID(cmbPayFor, true));
+                _SaveHeader.PayToCatID = int.Parse(MyCommon.GetSelectedID(cmbPayFor, true));
                 _SaveHeader.PayToName = cmbPayTo.Text;
                 _SaveHeader.PayActualDate = dtpPVNDate.Value;
                 if (chkAsAdvancePayment.Checked)
@@ -548,8 +565,8 @@ namespace AccountERP
                 else
                     _SaveHeader.IsAdvancePayment = 0;
 
-                List < AccountTypes.Payment_GeneralDetailsDataType> _SaveDetailList;
-                string respond=SetDetailDataToClass(out _SaveDetailList);
+                List<AccountTypes.Payment_GeneralDetailsDataType> _SaveDetailList;
+                string respond = SetDetailDataToClass(out _SaveDetailList);
                 _SaveHeader.Details = _SaveDetailList;
                 return "True";
 
@@ -561,17 +578,17 @@ namespace AccountERP
             }
         }
 
-       
-        private void  CalTotalLine( )
+
+        private void CalTotalLine()
         {
             decimal Vat;
-            decimal Amount,FCR=0;
+            decimal Amount, FCR = 0;
             Vat = 0;
             Amount = 0;
-           
-            foreach (DataGridViewRow  item in dgvAccList.Rows )
+
+            foreach (DataGridViewRow item in dgvAccList.Rows)
             {
-                decimal Vat1=0, Amount1=0,FCR1=0;
+                decimal Vat1 = 0, Amount1 = 0, FCR1 = 0;
                 bool resp = decimal.TryParse(item.Cells["dgvAccList_Amount"].Value.ToString(), out Amount1);
                 resp = decimal.TryParse(item.Cells["dgvAccList_Vat"].Value.ToString(), out Vat1);
                 resp = decimal.TryParse(item.Cells["dgvAccList_Fcur"].Value.ToString(), out FCR1);
@@ -581,27 +598,27 @@ namespace AccountERP
             }
             txtTotalvat.Text = Vat.ToString("0.00");
             txtToalAmountLKR.Text = Amount.ToString("0.00");
-            txtToalAmountFCR.Text =FCR.ToString("0.00");
+            txtToalAmountFCR.Text = FCR.ToString("0.00");
         }
         private void ClearUpperLine()
         {
             txtToAccount.Text = "";
             lblLRef.Text = "";
             lblToID.Text = "";
-            txtToMemo.Text ="";
+            txtToMemo.Text = "";
             txtJobNumber.Text = "";
             txtVat.Text = "";
             txtAmount.Text = "";
         }
         private void dgvAccList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ComboboxItem cmb=new ComboboxItem ();
+            ComboboxItem cmb = new ComboboxItem();
 
             if (e.RowIndex != -1)
             {
                 lblLRef.Text = dgvAccList.Rows[e.RowIndex].Cells["dgvAccList_Ref"].Value.ToString();
-                lblToID .Text =dgvAccList.Rows[e.RowIndex].Cells["dgvAccList_AccountID"].Value.ToString();
-                txtToAccount .Text =MyAccount .GetAccountName(lblToID .Text );
+                lblToID.Text = dgvAccList.Rows[e.RowIndex].Cells["dgvAccList_AccountID"].Value.ToString();
+                txtToAccount.Text = MyAccount.GetAccountName(lblToID.Text);
                 txtToMemo.Text = dgvAccList.Rows[e.RowIndex].Cells["dgvAccList_Memo"].Value.ToString();
                 txtJobNumber.Text = dgvAccList.Rows[e.RowIndex].Cells["dgvAccList_Job"].Value.ToString();
                 txtVat.Text = dgvAccList.Rows[e.RowIndex].Cells["dgvAccList_Vat"].Value.ToString();
@@ -611,11 +628,11 @@ namespace AccountERP
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-           
+
             ClearCurrent();
             LoadToCombo();
             EnableCurrent(true);
-          
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -643,7 +660,7 @@ namespace AccountERP
 
         }
 
-    
+
         private void txtToAccount_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -659,7 +676,7 @@ namespace AccountERP
 
         private void HanchyGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1) 
+            if (e.RowIndex != -1)
             {
                 lblToID.Text = HanchyGrid.Rows[e.RowIndex].Cells["HanchyGrid_AcID"].Value.ToString();
                 txtToAccount.Text = HanchyGrid.Rows[e.RowIndex].Cells["HanchyGrid_Name"].Value.ToString();
@@ -682,17 +699,22 @@ namespace AccountERP
             }
         }
         private AccountTypes.Payment_GeneralDataType _ExtData = new AccountTypes.Payment_GeneralDataType();
-        private void DisplayExtDetails(string PVN )
+        private void DisplayExtDetails(string PVN)
         {
-           
+
             string respond = "";
             respond = MyPay.GetExistPayment_General(PVN, out _ExtData);
             ComboboxItem cmb = new ComboboxItem();
             if (respond == "True")
             {
+                //Added By manju
+                if (_ExtData.PayStatus == 3)
+                {
+                    btnPrint.Enabled = true;
+                }
                 txtPVNno.Text = _ExtData.PaymentID;
                 cmbFromAcc.Text = cmb.GetReleventTextFromID(cmbFromAcc, _ExtData.AccountID, true);
-                cmbPayFor.Text = cmb.GetReleventTextFromID(cmbPayFor, _ExtData.PayToCatID.ToString (), true);
+                cmbPayFor.Text = cmb.GetReleventTextFromID(cmbPayFor, _ExtData.PayToCatID.ToString(), true);
                 cmbPayMethod.Text = cmb.GetReleventTextFromID(cmbPayMethod, _ExtData.PaymentMethod.ToString(), true);
                 cmbPayTo.Text = _ExtData.PayToName;
                 cmbPayTo_SelectedIndexChanged(null, null);
@@ -701,12 +723,12 @@ namespace AccountERP
                 if (_ExtData.IsAdvancePayment == 1)
                     chkAsAdvancePayment.Checked = true;
                 else
-                    chkAsAdvancePayment.Checked = false ;
+                    chkAsAdvancePayment.Checked = false;
                 DataTable tb = MyPay.GetPAyDetailList(PVN);
                 MyCommon.LoadDatatoTableWithoutBind(dgvAccList, tb, "Load Payment list");
                 CalTotalLine();
             }
-            tabControl1.SelectTab(0); 
+            tabControl1.SelectTab(0);
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -718,7 +740,7 @@ namespace AccountERP
                 //Edited by Manjula
                 string SupName = cmbPayTo.SelectedValue.ToString();
                 LINKPayment objLink = new LINKPayment();
-                objLink.SupName=SupName;
+                objLink.SupName = SupName;
                 LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
 
                 if (objSuppID.Length > 0)
@@ -732,8 +754,8 @@ namespace AccountERP
             }
             catch (Exception ex)
             {
-                
-              
+
+
             }
         }
 
@@ -744,44 +766,44 @@ namespace AccountERP
         }
 
         private void btnPost_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want send to Approval ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (MessageBox.Show("Do you want send to Approval ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                string respond = "";
-                    int VoucherStatus = MyPay.GetPVNStatus(txtPVNno.Text);
-                    switch (VoucherStatus)
-                        {
-                        case 0:
-                            respond = MyPay.SendToApproval(txtPVNno.Text, Program.AccountStatic.UserName);
-                            if (respond == "True")
-                                Program.InformationMessage("Successfully Send to Approval");
-                            else
-                                Program.VerningMessage(respond); 
-                            break;
-                        case 1:
-                            Program.VerningMessage("Already Approved!!! you cannot change ......"); 
-                            break;
-                        case 2:
-                            Program.VerningMessage("Already Approved!!! you cannot change ......"); 
-                            break;
-                        case 3:
-                            Program.VerningMessage("Already Accounted!!! you cannot change ......"); 
-                            break;
-                        default:
-                            break;
-                        }
-                } 
-            }
-
-        private void btnApproved_Click(object sender, EventArgs e)
-            {
-            string PayFor="";
-            if (MessageBox.Show("Do you want approved this payment ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
                 string respond = "";
                 int VoucherStatus = MyPay.GetPVNStatus(txtPVNno.Text);
                 switch (VoucherStatus)
-                    {
+                {
+                    case 0:
+                        respond = MyPay.SendToApproval(txtPVNno.Text, Program.AccountStatic.UserName);
+                        if (respond == "True")
+                            Program.InformationMessage("Successfully Send to Approval");
+                        else
+                            Program.VerningMessage(respond);
+                        break;
+                    case 1:
+                        Program.VerningMessage("Already Approved!!! you cannot change ......");
+                        break;
+                    case 2:
+                        Program.VerningMessage("Already Approved!!! you cannot change ......");
+                        break;
+                    case 3:
+                        Program.VerningMessage("Already Accounted!!! you cannot change ......");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void btnApproved_Click(object sender, EventArgs e)
+        {
+            string PayFor = "";
+            if (MessageBox.Show("Do you want approved this payment ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                string respond = "";
+                int VoucherStatus = MyPay.GetPVNStatus(txtPVNno.Text);
+                switch (VoucherStatus)
+                {
                     case 0:
                         Program.VerningMessage("This is not in approval stage !!!......");
                         break;
@@ -790,7 +812,18 @@ namespace AccountERP
                         if (respond == "True")
                         {
                             PayFor = MyCommon.GetSelectedID(cmbPayFor, true);
-                            string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
+                            //string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
+                            //Added by manju
+                            string PayToID = "";
+                            string SupName = cmbPayTo.Text;
+                            LINKPayment objLink = new LINKPayment();
+                            objLink.SupName = SupName;
+                            LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
+
+                            if (objSuppID.Length > 0)
+                            {
+                                PayToID = objSuppID[0].SupplierID.ToString();
+                            }            
 
                             if (PayFor == "1")
                             {
@@ -799,38 +832,38 @@ namespace AccountERP
                                     decimal amount = 0;
                                     bool redtp = decimal.TryParse(r.Cells["dgvAccList_Fcur"].Value.ToString(), out amount);
 
-                                   string reply= MyPay.UpdatePendingBillAmount(int.Parse(PayToID), r.Cells["dgvAccList_Job"].Value.ToString(), amount);
+                                    string reply = MyPay.UpdatePendingBillAmount(int.Parse(PayToID), r.Cells["dgvAccList_Job"].Value.ToString(), amount);
                                 }
-                                
-                               
+
+
                             }
                             Program.InformationMessage("Successfully Approved !!!!");
                         }
                         else
                             Program.VerningMessage(respond);
-                          break;
+                        break;
                     case 2:
-                          Program.VerningMessage("Already Approved !!!......");
-                          break;
+                        Program.VerningMessage("Already Approved !!!......");
+                        break;
                     case 3:
                         Program.VerningMessage("Already Accounted!!! you cannot change ......");
                         break;
                     default:
                         break;
-                    }
-                } 
+                }
             }
+        }
 
         private void btnPostTpAcc_Click(object sender, EventArgs e)
-            {
+        {
 
             string respond = "";
             if (MessageBox.Show("Do you want post this to account ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    MyTransaction = new AccountTranaction(Program.AccountStatic.LoggingAsLocal);
+            {
+                MyTransaction = new AccountTranaction(Program.AccountStatic.LoggingAsLocal);
                 int VoucherStatus = MyPay.GetPVNStatus(txtPVNno.Text);
                 switch (VoucherStatus)
-                    {
+                {
                     case 0:
                         Program.VerningMessage("This is not Approved Voucher !!!......");
                         break;
@@ -838,26 +871,26 @@ namespace AccountERP
                         Program.VerningMessage("This is not Approved Voucher !!!......");
                         break;
                     case 2:
-                        string PVN="";
+                        string PVN = "";
                         respond = MyTransaction.DoPaymentTransaction(_ExtData, Program.AccountStatic.UserName, out PVN);
                         if (respond == "True")
-                            {
-                                txtPVNno.Text = PVN;
-                                Program.InformationMessage("Successfully Posted to Account !!!!");
-                            }
+                        {
+                            txtPVNno.Text = PVN;
+                            Program.InformationMessage("Successfully Posted to Account !!!!");
+                        }
                         else
-                            {
+                        {
                             Program.VerningMessage(respond);
-                              }
+                        }
                         break;
                     case 3:
                         Program.VerningMessage("Already Accounted!!! you cannot change ......");
                         break;
                     default:
                         break;
-                    }
-                } 
+                }
             }
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -930,122 +963,122 @@ namespace AccountERP
             return -1;
         }
         private void btnAddToList_Click(object sender, EventArgs e)
+        {
+            //string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
+            string PayToID = SuppID;
+
+            decimal fullamount = 0;
+            bool resp = decimal.TryParse(txttotalAmount.Text, out fullamount);
+            decimal ExchageBalanceAmountLKR = 0;
+            foreach (DataGridViewRow r in dgvBillList.Rows)
             {
-                string PayToID = MyCommon.GetSelectedID(cmbPayTo, true);
+                string curreny1 = MyAccount.GetAccountCurrenyType(r.Cells["dgvBillList_AccID"].Value.ToString());
+                if (curreny1 == lblCurrentcy.Text.Trim())
+                {
 
-         
-                decimal fullamount = 0;
-                bool resp = decimal.TryParse(txttotalAmount.Text, out fullamount);
-                decimal ExchageBalanceAmountLKR = 0;
-                foreach (DataGridViewRow r in dgvBillList.Rows)
+
+
+                    if (chkAutoFill.Checked)
                     {
-                    string curreny1 = MyAccount.GetAccountCurrenyType(r.Cells["dgvBillList_AccID"].Value.ToString());
-                    if (curreny1 == lblCurrentcy.Text.Trim())
-                    {
-                       
+                        decimal onelineamount = 0;
+                        resp = decimal.TryParse(r.Cells["dgvBillList_Cr"].Value.ToString(), out onelineamount);
+                        decimal remain = fullamount - onelineamount;
 
-                            
-                            if (chkAutoFill.Checked)
-                            {
-                                decimal onelineamount = 0;
-                                resp = decimal.TryParse(r.Cells["dgvBillList_Cr"].Value.ToString(), out onelineamount);
-                                decimal remain = fullamount - onelineamount;
-                                
-                                if ((fullamount > onelineamount) || (fullamount == onelineamount))
-                                {
-                                    r.Cells["dgvBillList_CurPayment"].Value = r.Cells["dgvBillList_Cr"].Value.ToString();
-                                    r.Cells["dgvBillList_Select"].Value = "1";
-                                    fullamount = remain;
-                                }
-                                else
-                                {
-                                    r.Cells["dgvBillList_CurPayment"].Value = fullamount.ToString("##0.00");
-                                    r.Cells["dgvBillList_Select"].Value = "1";
-                                    chkAutoFill.Checked = false;
-                                }
-                            }
-                            if (r.Cells["dgvBillList_Select"].Value.ToString() == "1")
-                            {
-                                int Lref = 0;
-                                bool res = int.TryParse(lblLRef.Text, out Lref);
-                                if (Lref == 0)
-                                {
-                                    Lref = dgvAccList.RowCount + 1;
-                                }
-                                decimal LKR = 0;
-                                decimal USD1=0;
-                                decimal ExRate = 0;
-
-                                decimal payiedExrate = 0;
-                                decimal DiffrenceRate = 0;
-
-                                bool rsp = decimal.TryParse(r.Cells["dgvBillList_CurPayment"].Value.ToString(), out USD1);
-                                rsp = decimal.TryParse(txtExRate.Text , out ExRate);
-                                rsp = decimal.TryParse(r.Cells["dgvBillList_Exrate"].Value.ToString(), out payiedExrate);
-                               
-                                if (payiedExrate != ExRate)
-                                {
-                                        DiffrenceRate = ExRate - payiedExrate;
-                                        ExchageBalanceAmountLKR =ExchageBalanceAmountLKR + (DiffrenceRate * USD1);
-                                        ExRate = payiedExrate;
-                                }
-                                LKR = USD1 * payiedExrate;
-                                int Index1 = ExistAutoTable(r.Cells["dgvBillList_Bill"].Value.ToString());
-                                if (Index1 !=-1)
-                                {
-                                    dgvAccList.Rows[Index1].Cells[2].Value = "Payment of " + r.Cells["dgvBillList_Bill"].Value.ToString();
-                                    dgvAccList.Rows[Index1].Cells[3].Value = r.Cells["dgvBillList_Bill"].Value.ToString();
-                                    dgvAccList.Rows[Index1].Cells[4].Value = "";
-                                    dgvAccList.Rows[Index1].Cells[5].Value = LKR.ToString("##0.00");
-                                    dgvAccList.Rows[Index1].Cells[6].Value = USD1.ToString("##0.00");
-                                    dgvAccList.Rows[Index1].Cells[7].Value = payiedExrate.ToString("##0.00");
-                                }
-                                else
-                                {
-                                    string AcName=MyAccount .GetAccountName (r.Cells["dgvBillList_AccID"].Value.ToString());
-                                    string[] Oneline = { r.Cells["dgvBillList_AccID"].Value.ToString(),AcName, "Payment of " + r.Cells["dgvBillList_Bill"].Value.ToString(), r.Cells["dgvBillList_Bill"].Value.ToString(), "", LKR.ToString("##0.00"), USD1.ToString("##0.00"),payiedExrate.ToString ("##0.00"), GetNextLinNumber("dgvAccList_Ref") };
-                                    dgvAccList.Rows.Add(Oneline);
-                                }
-
-                        }
-                    }
-                    else
+                        if ((fullamount > onelineamount) || (fullamount == onelineamount))
                         {
-                            Program.VerningMessage("Currency type miss match");
+                            r.Cells["dgvBillList_CurPayment"].Value = r.Cells["dgvBillList_Cr"].Value.ToString();
+                            r.Cells["dgvBillList_Select"].Value = "1";
+                            fullamount = remain;
+                        }
+                        else
+                        {
+                            r.Cells["dgvBillList_CurPayment"].Value = fullamount.ToString("##0.00");
+                            r.Cells["dgvBillList_Select"].Value = "1";
+                            chkAutoFill.Checked = false;
                         }
                     }
-                if (ExchageBalanceAmountLKR < 0)
+                    if (r.Cells["dgvBillList_Select"].Value.ToString() == "1")
                     {
-                        ExchageBalanceAmountLKR = ExchageBalanceAmountLKR * -1;
-                        string GetExGainID = MyAccount.GetExchangeGainAccount();
-                        string AcName = MyAccount.GetAccountName(GetExGainID);
-                        string[] Oneline = { GetExGainID, AcName, "Exchange Gain ", "", "", ExchageBalanceAmountLKR.ToString("##0.00"), "0.00","1", GetNextLinNumber("dgvAccList_Ref") };
-                        dgvAccList.Rows.Add(Oneline);
-                    }
-                else
-                    {
-                        
-                        string GetExLossID = MyAccount.GetExchangeLossAccount();
-                        string AcName = MyAccount.GetAccountName(GetExLossID);
-                        string[] Oneline = { GetExLossID, AcName, "Exchange Loss ", "", "", ExchageBalanceAmountLKR.ToString("##0.00"), "0.00","1", GetNextLinNumber("dgvAccList_Ref") };
-                        dgvAccList.Rows.Add(Oneline);
-                    }
-                    CalTotalLine();
-                    panel14.Visible = false;
+                        int Lref = 0;
+                        bool res = int.TryParse(lblLRef.Text, out Lref);
+                        if (Lref == 0)
+                        {
+                            Lref = dgvAccList.RowCount + 1;
+                        }
+                        decimal LKR = 0;
+                        decimal USD1 = 0;
+                        decimal ExRate = 0;
 
-               
-            
+                        decimal payiedExrate = 0;
+                        decimal DiffrenceRate = 0;
+
+                        bool rsp = decimal.TryParse(r.Cells["dgvBillList_CurPayment"].Value.ToString(), out USD1);
+                        rsp = decimal.TryParse(txtExRate.Text, out ExRate);
+                        rsp = decimal.TryParse(r.Cells["dgvBillList_Exrate"].Value.ToString(), out payiedExrate);
+
+                        if (payiedExrate != ExRate)
+                        {
+                            DiffrenceRate = ExRate - payiedExrate;
+                            ExchageBalanceAmountLKR = ExchageBalanceAmountLKR + (DiffrenceRate * USD1);
+                            ExRate = payiedExrate;
+                        }
+                        LKR = USD1 * payiedExrate;
+                        int Index1 = ExistAutoTable(r.Cells["dgvBillList_Bill"].Value.ToString());
+                        if (Index1 != -1)
+                        {
+                            dgvAccList.Rows[Index1].Cells[2].Value = "Payment of " + r.Cells["dgvBillList_Bill"].Value.ToString();
+                            dgvAccList.Rows[Index1].Cells[3].Value = r.Cells["dgvBillList_Bill"].Value.ToString();
+                            dgvAccList.Rows[Index1].Cells[4].Value = "";
+                            dgvAccList.Rows[Index1].Cells[5].Value = LKR.ToString("##0.00");
+                            dgvAccList.Rows[Index1].Cells[6].Value = USD1.ToString("##0.00");
+                            dgvAccList.Rows[Index1].Cells[7].Value = payiedExrate.ToString("##0.00");
+                        }
+                        else
+                        {
+                            string AcName = MyAccount.GetAccountName(r.Cells["dgvBillList_AccID"].Value.ToString());
+                            string[] Oneline = { r.Cells["dgvBillList_AccID"].Value.ToString(), AcName, "Payment of " + r.Cells["dgvBillList_Bill"].Value.ToString(), r.Cells["dgvBillList_Bill"].Value.ToString(), "", LKR.ToString("##0.00"), USD1.ToString("##0.00"), payiedExrate.ToString("##0.00"), GetNextLinNumber("dgvAccList_Ref") };
+                            dgvAccList.Rows.Add(Oneline);
+                        }
+
+                    }
+                }
+                else
+                {
+                    Program.VerningMessage("Currency type miss match");
+                }
             }
+            if (ExchageBalanceAmountLKR < 0)
+            {
+                ExchageBalanceAmountLKR = ExchageBalanceAmountLKR * -1;
+                string GetExGainID = MyAccount.GetExchangeGainAccount();
+                string AcName = MyAccount.GetAccountName(GetExGainID);
+                string[] Oneline = { GetExGainID, AcName, "Exchange Gain ", "", "", ExchageBalanceAmountLKR.ToString("##0.00"), "0.00", "1", GetNextLinNumber("dgvAccList_Ref") };
+                dgvAccList.Rows.Add(Oneline);
+            }
+            else if(ExchageBalanceAmountLKR>0)
+            {
+
+                string GetExLossID = MyAccount.GetExchangeLossAccount();
+                string AcName = MyAccount.GetAccountName(GetExLossID);
+                string[] Oneline = { GetExLossID, AcName, "Exchange Loss ", "", "", ExchageBalanceAmountLKR.ToString("##0.00"), "0.00", "1", GetNextLinNumber("dgvAccList_Ref") };
+                dgvAccList.Rows.Add(Oneline);
+            }
+            CalTotalLine();
+            panel14.Visible = false;
+
+
+
+        }
 
         private void btnDelete_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             string stid = MyCommon.GetSelectedID(cmbStatus, true);
-            DataTable tb = MyPay.GetSerchPayList(1, 1, int.Parse (stid));
+            DataTable tb = MyPay.GetSerchPayList(1, 1, int.Parse(stid));
             MyCommon.LoadDatatoTableWithoutBind(dgvPaymentList, tb, "Load DAta List");
         }
 
@@ -1062,17 +1095,92 @@ namespace AccountERP
             }
             else
                 e.Cancel = true;
-            CalTotalLine(); 
+            CalTotalLine();
         }
 
         //Added by Manjula
+        public void FillAllDataGrid(int supid)
+        {
+            DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+            DataRow dr;
+            int Nodays = 0;
+            decimal tot30 = 0, tot45 = 0, tot60 = 0, tot90 = 0, totmore = 0, totOutstanding = 0, Fcr = 0;
+
+            dt.Columns.Add("<30 Days");
+            dt.Columns.Add("30-45 Days");
+            dt.Columns.Add("45-60 Days");
+            dt.Columns.Add("60-90 Days");
+            dt.Columns.Add(">90 Days");
+            dt.Columns.Add("Total Outstandings");
+
+            dt2 = MyCommon.GetDataTableAccount("select DATEDIFF(CURDATE(),Billdate) as NoDays,FCr from tblpendingpayablebill  where supplier='" + supid + "' and billstatus=0", "Get Oustanding Bill");
+            if (dt2.Rows.Count > 0)
+            {
+
+                #region get summery
+                for (int i = 0; i < dt2.Rows.Count; i++)
+                {
+                    Fcr = Convert.ToDecimal(dt2.Rows[i][1]);
+                    Nodays = Convert.ToInt32(dt2.Rows[i][0]);
+
+                    totOutstanding = totOutstanding + Fcr;
+
+                    if (Nodays <= 30)
+                    {
+                        tot30 = tot30 + Fcr;
+                    }
+
+                    if (Nodays > 30 && Nodays <= 45)
+                    {
+                        tot45 = tot45 + Fcr;
+                    }
+
+                    if (Nodays > 45 && Nodays <= 60)
+                    {
+                        tot60 = tot60 + Fcr;
+                    }
+
+                    if (Nodays > 60 && Nodays <= 90)
+                    {
+                        tot90 = tot90 + Fcr;
+                    }
+
+                    if (Nodays > 90)
+                    {
+                        totmore = totmore + Fcr;
+                    }
+
+                }
+                #endregion
+            }
+
+            dr = dt.NewRow();
+
+            dr[0] = Math.Round(tot30, 2);
+            dr[1] = Math.Round(tot45, 2);
+            dr[2] = Math.Round(tot60, 2);
+            dr[3] = Math.Round(tot90, 2);
+            dr[4] = Math.Round(totmore, 2);
+            dr[5] = Math.Round(totOutstanding, 2);
+
+            dt.Rows.Add(dr.ItemArray);
+
+            tot30 = tot45 = tot60 = tot90 = totmore = totOutstanding = 0;
+
+
+            dataGridView1.DataSource = dt;
+
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 panel15.Visible = true;
 
-
+                FillAllDataGrid(Convert.ToInt32(SuppID));
 
             }
             catch (Exception ex)
@@ -1081,6 +1189,25 @@ namespace AccountERP
 
             }
         }
+
+        private void panel15_Click(object sender, EventArgs e)
+        {
+            panel15.Visible = false;
+        }
+
+        private void panel14_Click(object sender, EventArgs e)
+        {
+            panel14.Visible = false;
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            frmPrintZone obj = new frmPrintZone();
+            obj.Voucherid = txtPVNno.Text;
+            obj.Show();
+        }
+
+        
 
     }
 }

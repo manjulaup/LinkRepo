@@ -33,6 +33,22 @@ namespace BusinessLayer.CommonOperation
 
         }
      //   public static MySqlConnection WEBConnection = new MySqlConnection(ConfigurationManager.AppSettings["saticinweb"].ToString());    
+        public int GetObjectID(string Obgname)
+        {
+            int _ObgID = -1;
+            String Str1;
+            DataRow Mydr;
+            Str1 = "Select SysID From tblobject Where ObgfileName='" + Obgname + "'";
+            Mydr = GetDataRowAccount(Str1, "Get Object ID");
+            if (Mydr != null)
+            {
+                _ObgID = Int32.Parse(Mydr.ItemArray.GetValue(0).ToString());
+                return _ObgID;
+            }
+            else
+                _ObgID = 0;
+            return _ObgID;
+        }
 
         public struct ThreeSConfiguration
         {

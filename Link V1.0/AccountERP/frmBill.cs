@@ -63,7 +63,10 @@ namespace AccountERP
             dt.Columns.Add("SupplierID");
             dt.Columns.Add("SupplierName");
 
+           // List<LINKPayment> objSupList = new List<LINKPayment>();
+
             LINKPayment[] objSupList = objService.GetCreditorFinalSupplierList();
+
             if (objSupList.Length > 0)
             {
                 for (int j = 0; j < objSupList.Length; j++)
@@ -130,6 +133,7 @@ namespace AccountERP
             dt.Columns.Add("Name");
             dt.Columns.Add("AccNo");
             dt.Columns.Add("MaterialCode");
+            dt.Columns.Add("PONo");
 
             LINKPayment[] objSupList = objService.GetGRNMaterial(objLink);
             if (objSupList.Length > 0)
@@ -144,6 +148,7 @@ namespace AccountERP
                     dr[2] = objSupList[j].Description.ToString();
                     dr[3] = objSupList[j].AccNo.ToString();
                     dr[4] = objSupList[j].MaterialCode.ToString();
+                    dr[5] = "9988";
 
                     dt.Rows.Add(dr.ItemArray);
                 }
@@ -155,12 +160,24 @@ namespace AccountERP
                 checkColumn.Name = "Select";
                 checkColumn.HeaderText = "Select";
                 checkColumn.Width = 50;
-                checkColumn.ReadOnly = false;
+                checkColumn.ReadOnly = true;
                 checkColumn.FillWeight = 10; //if the datagridview is resized (on form resize) the checkbox won't take up too much; value is relative to the other columns' fill values
+             
                 dtpGRNDetals.Columns.Add(checkColumn);
 
                 dtpGRNDetals.DataSource = null;
                 dtpGRNDetals.DataSource = dt;
+
+
+                for (int i = 0; i < dtpGRNDetals.Rows.Count; i++)
+                {
+                    dtpGRNDetals.Rows[i].Cells[0].Value = true;
+                }
+
+            }else
+            {
+                dtpGRNDetals.DataSource = null;
+                dtpGRNDetals.Columns.Clear();
             }
         }
 
@@ -170,6 +187,7 @@ namespace AccountERP
                 //Edit by manjula
                 string SupName = cmbSupplier.SelectedValue.ToString();
                 string CreditPeriod = "";
+                string ACCNo = "";
                 LINKPayment objLink = new LINKPayment();
                 objLink.SupName=SupName;
                 LINKPayment[] objSuppID = objService.GetCreditorFinalSupplier(objLink);
@@ -178,10 +196,11 @@ namespace AccountERP
                 {
                     supid = objSuppID[0].SupplierID.ToString();
                     CreditPeriod = objSuppID[0].CreditPeriod.ToString();
+                    ACCNo = objSuppID[0].AccNo.ToString();
                 }
 
                 int SupID1 = int.Parse(supid);
-                lblAccnumber.Text = "3001";  //**************** need to load suuplier acc here
+                lblAccnumber.Text = ACCNo; 
 
                 string curRate = "";
                 decimal ExRate = MyAccount.GetExRate(lblAccnumber.Text, out curRate);
@@ -195,6 +214,7 @@ namespace AccountERP
                // MyBill.LoadGRNNumbers(cmbGRN, SupID1);
                // txtpayterm.Text = MyAccount.GetCreditPeriod(SupID1, true).ToString();
                // lblTotalBillOutstanding.Text = MyBill.GetTotalOutstanding(SupID1).ToString("##0.00");
+                objLink.Status = 0;
                 LoadGRN(objLink);
 
                 txtpayterm.Text = CreditPeriod;
@@ -412,7 +432,8 @@ namespace AccountERP
                 _SaveData.TobePayDate = DateTime.Parse(lblDueDate.Text);
                 _SaveData.TrUser = Program.AccountStatic.UserName;
                 _SaveData.TrDate = dtpInvoiceDate.Value;
-                _SaveData.BillDate = dtpBilingDate.Value;  
+                _SaveData.BillDate = dtpBilingDate.Value;
+                _SaveData.PONo = dtpGRNDetals.Rows[0].Cells["PONo"].Value.ToString();
              
                 List<BillingDataTypes.BillingDetailsDataType> _SaveDetails = new List<BillingDataTypes.BillingDetailsDataType>();
                 string respond = SetPayBillDetails(out _SaveDetails);
@@ -525,12 +546,17 @@ namespace AccountERP
 
                                 Program.InformationMessage("Record saved successfully");
                                // LoadBillList(MyCommon.GetSelectedID(cmbSupplier, true));
+
                                 LoadBillList(SupID.ToString());
-                                LINKPayment objLink = new LINKPayment();
-                                objLink.SupName = cmbSupplier.SelectedValue.ToString();
 
                                 //Added by manju
+                                LINKPayment objLink = new LINKPayment();
+                                objLink.SupName = cmbSupplier.SelectedValue.ToString();
+                                objLink.Status = 0;
                                 LoadGRN(objLink);
+
+                                dtpGRNDetals.Columns.Clear();
+                                dtpGRNDetals.DataSource = null;
 
                             }
                             else
@@ -745,11 +771,16 @@ namespace AccountERP
                 //Edited by manjula
 
                 cmbSupplier_SelectedIndexChanged(null, null);
-                cmbGRN.Text = _ExtData.BillNo;
                 //Added by Manju
                 StatusAll = 9;
+                LINKPayment objLink = new LINKPayment();
+                objLink.Status = 9;
+                objLink.SupName = cmbSupplier.SelectedValue.ToString();
+                LoadGRN(objLink);
+                cmbGRN.Text = _ExtData.BillNo;
                 cmbGRN_SelectedIndexChanged(null, null);
                 StatusAll = 0;
+
                 txtDescription.Text = _ExtData.Description;
                 dtpBilingDate.Value = _ExtData.BillDate;
                 lblExchangerate.Text = _ExtData.CurRate.ToString("#0.00");

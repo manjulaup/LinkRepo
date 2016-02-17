@@ -9,6 +9,7 @@ using BusinessLayer.CommonOperation;
 using DataLayer.DataService;
 using System.Windows.Forms;
 using System.Drawing;
+
 namespace BusinessLayer.Billings
     {
     public class Billing
@@ -203,7 +204,7 @@ namespace BusinessLayer.Billings
           + "CompanyID,"
           + "PayToCatID,"
           + "PayToID,"
-          + "TobePayDate,BillDate)"
+          + "TobePayDate,BillDate,PONo)"
            + " Values ("
            + "@BillNo,"
            + "@Description,"
@@ -219,7 +220,7 @@ namespace BusinessLayer.Billings
            + "@CompanyID,"
            + "@PayToCatID,"
            + "@PayToID,"
-           + "@TobePayDate,@BillDate)";
+           + "@TobePayDate,@BillDate,@PONo)";
             try
                 {
                 oSqlCommand.Parameters.AddWithValue("@BillNo", _SaveData.BillNo);
@@ -236,6 +237,7 @@ namespace BusinessLayer.Billings
                 oSqlCommand.Parameters.AddWithValue("@PayToID", _SaveData.PayToID);
                 oSqlCommand.Parameters.AddWithValue("@TobePayDate", _SaveData.TobePayDate);
                 oSqlCommand.Parameters.AddWithValue("@BillDate", _SaveData.BillDate);
+                oSqlCommand.Parameters.AddWithValue("@PONo", _SaveData.PONo);
                 string respond = Mycommon.ExicuteAnyCommandAccountWithTrans(sqlQuery, oSqlCommand,_CurCon, "Save Billing");
                 return respond;
                 }
@@ -1124,6 +1126,7 @@ namespace BusinessLayer.Billings
             public decimal PayAmount;
             public DateTime TobePayDate;
             public DateTime BillDate;
+            public string PONo;
             public List<BillingDetailsDataType> BillingDetails;
             }
         public struct BillingDetailsDataType

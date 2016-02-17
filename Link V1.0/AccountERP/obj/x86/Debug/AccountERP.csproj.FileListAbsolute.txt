@@ -78,3 +78,6 @@ D:\GIT HUB\Link V1.0\AccountERP\bin\Debug\EntityHandler.pdb
 D:\GIT HUB\Link V1.0\AccountERP\bin\Debug\DataAccessHandler.pdb
 D:\GIT HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.exe
 D:\GIT HUB\Link V1.0\AccountERP\obj\x86\Debug\Finance.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\RdlCompile.cache
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\RdlCompile.compiled
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\AccountERP\obj\x86\Debug\AccountERP.frmAcknowledgement.resources

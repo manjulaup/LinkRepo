@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="AccountCreation.cs" />
     <Compile Include="AcontTransaction.cs" />
+    <Compile Include="BALAcknowledgement.cs" />
     <Compile Include="BankCheque.cs" />
     <Compile Include="Bill.cs" />
     <Compile Include="CommonOperation.cs" />

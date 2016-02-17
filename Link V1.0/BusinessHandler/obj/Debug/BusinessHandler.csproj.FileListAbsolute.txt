@@ -61,3 +61,4 @@ D:\GIT HUB\Link V1.0\BusinessHandler\bin\Debug\EntityHandler.pdb
 D:\GIT HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.csprojResolveAssemblyReference.cache
 D:\GIT HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.dll
 D:\GIT HUB\Link V1.0\BusinessHandler\obj\Debug\BusinessHandler.pdb
+E:\Link\GIT_ROOT\Link V1.0\Link V1.0\BusinessHandler\bin\Debug\MySql.Data.dll

@@ -71,6 +71,7 @@ namespace DataAccessHandler
                 string SqlQuery = "WCF_PaymentCreditorGetGRN";
 
                 oSqlCommand.Parameters.AddWithValue("@SupName", objPayment.SupName);
+                oSqlCommand.Parameters.AddWithValue("@Status", objPayment.Status);
                 oSqlCommand.CommandText = SqlQuery;
 
                 dt = new DALBase().SelectSPMRP(oSqlCommand);

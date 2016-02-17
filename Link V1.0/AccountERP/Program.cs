@@ -15,7 +15,7 @@ namespace AccountERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIMain());
+            Application.Run(new frmAcknowledgement());
         }
         public static void InformationMessage(string Massage)
         {
@@ -42,8 +42,69 @@ namespace AccountERP
                 public static int CurrentAccPeriod;
                 public static decimal ExchangeRate;
                 public static string HomeCurreny;
+              //  public static List<UserRights> CurrentUserRight = new List<UserRights>();
 
             }  
         #endregion
+
+            //public static bool HeCanDoThisOperation(int OBGID, int Right1)
+            //{
+            //    bool IsitFound = false;
+            //    foreach (UserRights Oneitem in AccountStatic.CurrentUserRight)
+            //    {
+            //        if (Oneitem.ObgID == OBGID)
+            //        {
+            //            switch (Right1)
+            //            {
+            //                case 1:                 //Save
+            //                    if (Oneitem.S == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                case 2:                 //Udate
+            //                    if (Oneitem.U == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                case 3:                 //Delete
+            //                    if (Oneitem.D == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                case 4:                 //Print
+            //                    if (Oneitem.P == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                case 5:                 //Acc Approved
+            //                    if (Oneitem.App == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                case 6:                 //Post to Acc
+            //                    if (Oneitem.Acc == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                case 7:                 //Show
+            //                    if (Oneitem.Sh == 1)
+            //                        IsitFound = true;
+            //                    else
+            //                        IsitFound = false;
+            //                    break;
+            //                default:
+            //                    break;
+            //            }
+            //            return IsitFound;
+            //        }
+            //    }
+            //    return IsitFound;
+            //}
     }
 }

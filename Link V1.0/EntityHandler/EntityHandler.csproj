@@ -40,16 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acknoladgement.cs" />
     <Compile Include="Appoinment.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="BankAccount.cs" />
     <Compile Include="BaseRolePrivileges.cs" />
     <Compile Include="Bill.cs" />
+    <Compile Include="ChangeNumbersToWords.cs" />
     <Compile Include="ChoseBank.cs" />
     <Compile Include="CreditorPayment.cs" />
     <Compile Include="CustomerMaster.cs" />
     <Compile Include="LINKPayment.cs" />
     <Compile Include="Objects.cs" />
+    <Compile Include="PaymentVoucher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleDetails.cs" />
     <Compile Include="RolePermissions.cs" />
@@ -61,6 +64,9 @@
     <Compile Include="User.cs" />
     <Compile Include="UserRoles.cs" />
     <Compile Include="VoucherType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\PaymentVoucher.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

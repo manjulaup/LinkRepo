@@ -686,7 +686,7 @@ namespace BusinessLayer.PaymentsAndReciept
         }
         public DataTable GetPendingBillList(int SupID)
         {
-            string sql1="SELECT '0',BillNo, Description,FCr,'0', AccountID, CurRate,  TobePayDate, BillDate, PayedAmount "
+            string sql1="SELECT '0',BillNo, Description,FCr,FCr, AccountID, CurRate,  TobePayDate, BillDate, PayedAmount "
                 + " FROM tblpendingpayablebill where  Supplier=" + SupID + " and BillStatus=0";
             DataTable tb = Mycommon.GetDataTableAccount(sql1, "Get Payment Detail List");
             return tb;

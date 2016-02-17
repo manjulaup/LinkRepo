@@ -149,6 +149,7 @@ namespace BusinessHandler
                 obj.SupContact = row["SupPhone"].ToString();
                 obj.SupplierID = Convert.ToInt32(row["SupplierID"].ToString());
                 obj.CreditPeriod = Convert.ToInt32(row["CreditPeriod"].ToString());
+                obj.AccNo = row["ACCNo"].ToString();
 
             }
             catch (Exception ex)
